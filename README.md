@@ -16,6 +16,9 @@ Wanna use for WiFi Hacking? Visit this **blog**...
 
 # Screenshots
 
+Here's the screeshot of the software...
+![WiFi Password Preview](https://raw.githubusercontent.com/WarenGonzaga/WiFi-Passview/master/src/img/screenshot_01.png)
+
 # Custom Build
 
 To build your custom WiFi Passview simply do the following...
