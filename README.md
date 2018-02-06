@@ -1,4 +1,5 @@
 
+
 # WiFi Passview
 
 **WiFi Passview** is a batch script based program that can recover your WiFi Password easily in seconds. This is for Windows OS only.
@@ -14,7 +15,17 @@ This project is posted on a cyber security educational website called zsecurity.
 
 # Screenshots
 
-# Build
+# Custom Build
+
+To build your custom WiFi Passview simply do the following...
+1. Create a new folder in your working directory.
+2. Open your terminal on that directory and clone this repository by typing;<br>
+`git clone https://github.com/WarenGonzaga/WiFi-Passview.git`
+3. Go to the **WiFi-Passview** using terminal or open a terminal manually on that directory.
+4. Type the following to install the gulp in your system;<br>
+`$ npm install`<br>
+`$ npm install gulp`<br>
+`$ npm install -g gulp`<br>
 
 # Contributing
 
