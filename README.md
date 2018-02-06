@@ -3,7 +3,7 @@
 **WiFi Passview** is an open source batch script based program that can recover your WiFi Password easily in seconds. This is for Windows OS only. Basically, this scripted program has the same function as other passview softwares such as webpassview and mailpassview.
 
 # Zsecurity.org
-This project is posted on a cyber security educational website called zsecurity.com you should visit this project here for more information: https://zsecurity.com
+This project is posted on a cyber security educational website called zsecurity.com you should visit this project here for more information: https://zsecurity.org
 
 # Usage
 1. Download the latest version **[here](https://github.com/WarenGonzaga/WiFi-Passview/releases)**.
