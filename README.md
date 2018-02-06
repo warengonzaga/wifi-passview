@@ -1,11 +1,9 @@
+# WiFi Passview [![Developer](https://img.shields.io/badge/developed%20by-WarenGonzaga-green.svg)](https://github.com/WarenGonzaga/) [![GitHub release](https://img.shields.io/github/release/WarenGonzaga/WiFi-Passview.svg)](https://github.com/WarenGonzaga/WiFi-Passview/releases) [![Github All Releases](https://img.shields.io/github/downloads/WarenGonzaga/WiFi-Passview/total.svg)](https://github.com/WarenGonzaga/WiFi-Passview/archive/master.zip) [![License](https://img.shields.io/github/license/WarenGonzaga/WiFi-Passview.svg)](https://github.com/WarenGonzaga/WiFi-Passview)
 
-
-# WiFi Passview
-
-**WiFi Passview** is a batch script based program that can recover your WiFi Password easily in seconds. This is for Windows OS only.
+**WiFi Passview** is an open source batch script based program that can recover your WiFi Password easily in seconds. This is for Windows OS only. Basically, this scripted program has the same function as other passview softwares such as webpassview and mailpassview.
 
 # Zsecurity.org
-This project is posted on a cyber security educational website called zsecurity.com you should visit this project here: https://zsecurity.com
+This project is posted on a cyber security educational website called zsecurity.com you should visit this project here for more information: https://zsecurity.com
 
 # Usage
 1. Download the latest version **[here](https://github.com/WarenGonzaga/WiFi-Passview/releases)**.
