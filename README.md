@@ -16,7 +16,7 @@ This project is posted on a cyber security educational website called zsecurity.
 
 # Build
 
-# Contribution
+# Contributing
 
 # Author
 
@@ -27,9 +27,9 @@ This project is created by **Waren Gonzaga** for educational purposes.
 
 # License
 
-
+WiFi Passview is licensed under the MIT license. (http://opensource.org/licenses/MIT)
 
 # Donation
-**PayPal**: https://paypal.me/warengonzagaofficial
-**Bitcoin**:<br/>39qo5h3aic9K2aTFRzdGSVNuqtS8uMBKJu
+**PayPal**: https://paypal.me/warengonzagaofficial<br>
+**Bitcoin**:<br/>39qo5h3aic9K2aTFRzdGSVNuqtS8uMBKJu<br>
 **Electroneum**:<br/>etnkLbeYmT6PT5SpN3UdHyUcBz42ezViWUgKFqGCMbruPqWekvNRuQRhdAkjTp8wBLEC6Eew8nAt1CVaDSw8XJ5z6BoYfZy3Zx
