@@ -8,10 +8,13 @@
 This project is posted on a cyber security educational website called zsecurity.com you should visit this project here: https://zsecurity.com
 
 # Usage
-1. Download the batch file here.
-2. Run the **.bat** file as administrator.
-3. Follow the on screen instructions...
+1. Download the latest version **[here](https://github.com/WarenGonzaga/WiFi-Passview/releases)**.
+2. Extract the zip package and look for **".bat"** file, it should be in root directory.
+3. Run the **".bat"** file as administrator.
+3. Follow the on terminal screen instructions...
 4. Done!
+
+Wanna use for WiFi Hacking? Visit this **blog**...
 
 # Screenshots
 
@@ -36,7 +39,7 @@ Install gulp globally in your system.
 ```bash
 $ npm install -g gulp
 ```
-5. Go to **src** folder and edit **config.json** with your desired details.
+5. Go to **"src"** folder and edit **"config.json"** with your desired details.
 6. After that, go to the terminal and type the following;
 ```bash
 $ gulp
@@ -45,10 +48,12 @@ or you can type...
 ```bash
 $ gulp build
 ```
-7. You should see a batch file created on **prod** folder.
+7. You should see a batch file created on **"prod"** folder.
 8. Now, use that for your own need. Enjoy!
 
 # Contributing
+
+If you want to contribute to this project just make a pull request and let me know what are the changes you want to merge with this master branch. I'm not asking for any format or what. I'm not also strict in any pull request to be sent here just to make sure that the code you're submitting should not affect the entire repo.
 
 # Author
 
