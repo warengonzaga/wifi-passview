@@ -24,16 +24,29 @@ To build your custom WiFi Passview simply do the following...
 git clone https://github.com/WarenGonzaga/WiFi-Passview.git
 ```
 3. Go to the **WiFi-Passview** using terminal or open a terminal manually on that directory.
-4. Type the following to install the gulp in your system;<br>
+4. Type the following to install the devdependencies in your system;<br>
 ```bash
 $ npm install
 ```
+Install gulp in your system.
 ```bash
 $ npm install gulp
 ```
+Install gulp globally in your system.
 ```bash
 $ npm install -g gulp
 ```
+5. Go to **src** folder and edit **config.json** with your desired details.
+6. After that, go to the terminal and type the following;
+```bash
+$ gulp
+```
+or you can type...
+```bash
+$ gulp build
+```
+7. You should see a batch file created on **prod** folder.
+8. Now, use that for your own need. Enjoy!
 
 # Contributing
 
