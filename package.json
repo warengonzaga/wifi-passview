@@ -1,0 +1,20 @@
+{
+  "name": "wiFi_passview",
+  "version": "1.0.0",
+  "description": "A Batch File for WiFi Passview",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wifi",
+    "passview"
+  ],
+  "author": "Waren Gonzaga",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp-clean": "^0.4.0",
+    "gulp-util": "^3.0.7"
+  },
+  "dependencies": {}
+}
