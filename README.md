@@ -16,7 +16,7 @@ Wanna use for WiFi Hacking? Visit this **blog**...
 
 # Screenshots
 
-Here's the screeshot of the software...
+Here's the screeshot of the software...<br>
 ![WiFi Password Preview](https://raw.githubusercontent.com/WarenGonzaga/WiFi-Passview/master/src/img/screenshot_01.png)
 
 # Custom Build
@@ -73,4 +73,4 @@ WiFi Passview is licensed under the MIT license. (http://opensource.org/licenses
 **Bitcoin Cash**:<br>qqnmshtzdshcurvemam4lzpgh05k48ydscsr9lfzce<br>
 **Litecoin**:<br>LLSkoHehML9U95w7HETNtyXa4JPgxUb4f7<br>
 **Ethereum**:<br>0x2fc1eADC39aB6f7Cdc64a59AB8fe0Fc26a688969<br>
-**Electroneum**:<br/>etnkLbeYmT6PT5SpN3UdHyUcBz42ezViWUgKFqGCMbruPqWekvNRuQRhdAkjTp8wBLEC6Eew8nAt1CVaDSw8XJ5z6BoYfZy3Zx
+**Electroneum**:<br>etnkLbeYmT6PT5SpN3UdHyUcBz42ezViWUgKFqGCMbruPqWekvNRuQRhdAkjTp8wBLEC6Eew8nAt1CVaDSw8XJ5z6BoYfZy3Zx
