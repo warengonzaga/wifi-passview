@@ -28,7 +28,7 @@ gulp.task('build', function(cb){
 //Clean Task
 gulp.task('clean', function() {
    return gulp.src(path.prod+$config.config.filename+'_'+$config.config.version+'.bat', {read: false})
-        .pipe(clean()); 
+        .pipe(clean());
 });
 	
 //Default Tasks
