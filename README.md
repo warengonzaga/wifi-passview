@@ -69,5 +69,8 @@ WiFi Passview is licensed under the MIT license. (http://opensource.org/licenses
 
 # Donation
 **PayPal**: https://paypal.me/warengonzagaofficial<br>
-**Bitcoin**:<br/>39qo5h3aic9K2aTFRzdGSVNuqtS8uMBKJu<br>
+**Bitcoin**:<br>39qo5h3aic9K2aTFRzdGSVNuqtS8uMBKJu<br>
+**Bitcoin Cash**:<br>qqnmshtzdshcurvemam4lzpgh05k48ydscsr9lfzce<br>
+**Litecoin**:<br>LLSkoHehML9U95w7HETNtyXa4JPgxUb4f7<br>
+**Ethereum**:<br>0x2fc1eADC39aB6f7Cdc64a59AB8fe0Fc26a688969<br>
 **Electroneum**:<br/>etnkLbeYmT6PT5SpN3UdHyUcBz42ezViWUgKFqGCMbruPqWekvNRuQRhdAkjTp8wBLEC6Eew8nAt1CVaDSw8XJ5z6BoYfZy3Zx
