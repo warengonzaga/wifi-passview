@@ -52,6 +52,11 @@ $ gulp build
 7. You should see a batch file created on **"prod"** folder.
 8. Now, use that for your own need. Enjoy!
 
+_For more information about available commands type..._
+```bash
+$ gulp help
+```
+
 # Contributing
 
 If you want to contribute to this project just make a pull request and let me know what are the changes you want to merge with this master branch. I'm not asking for any format or what. I'm not also strict in any pull request to be sent here just to make sure that the code you're submitting should not affect the entire repo.
