@@ -54,7 +54,7 @@ netsh wlan show profiles
 set /p ssidname= Please enter the SSID of target WiFi: 
 netsh wlan show profiles %ssidname% key=clear
 if not %errorlevel%==0 goto :fail
-goto :successs
+goto :success
 
 pause>Nul
 
