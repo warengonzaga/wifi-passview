@@ -1,9 +1,20 @@
-# WiFi Passview [![Developer](https://img.shields.io/badge/developed%20by-WarenGonzaga-green.svg)](https://github.com/WarenGonzaga/) [![GitHub release](https://img.shields.io/github/release/WarenGonzaga/WiFi-Passview.svg)](https://github.com/WarenGonzaga/WiFi-Passview/releases) [![License](https://img.shields.io/github/license/WarenGonzaga/WiFi-Passview.svg)](https://github.com/WarenGonzaga/WiFi-Passview)
+# WiFi Passview 
+[![Developer](https://img.shields.io/badge/developed%20by-WarenGonzaga-green.svg)](https://github.com/WarenGonzaga/) 
+[![GitHub release](https://img.shields.io/github/release/WarenGonzaga/WiFi-Passview.svg)](https://github.com/WarenGonzaga/WiFi-Passview/releases) 
+[![License](https://img.shields.io/github/license/WarenGonzaga/WiFi-Passview.svg)](https://github.com/WarenGonzaga/WiFi-Passview)
 
 **WiFi Passview** is an open source batch script based program that can recover your WiFi Password easily in seconds. This is for Windows OS only. Basically, this scripted program has the same function as other passview softwares such as webpassview and mailpassview.
 
 # Zsecurity.org
 This project is posted on a cyber security educational website called zsecurity.org you should visit this project here for more information: https://zsecurity.org
+
+# How it Works?
+
+Basically, this is the shortcut and batch scripted file version of a popular WiFi password manager viewing method using command prompt. This is how it works...
+
+```bash
+netsh wlan show profiles
+```
 
 # Usage
 1. Download the latest version **[here](https://github.com/WarenGonzaga/WiFi-Passview/releases)**.
@@ -52,7 +63,7 @@ $ gulp build
 7. You should see a batch file created on **"prod"** folder.
 8. Now, use that for your own need. Enjoy!
 
-_For more information about available commands type..._
+_For more information about available commands just type..._
 ```bash
 $ gulp help
 ```
