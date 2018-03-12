@@ -1,5 +1,8 @@
 # WiFi Passview 
-[![Developer](https://img.shields.io/badge/developed%20by-WarenGonzaga-green.svg)](https://github.com/WarenGonzaga/) 
+[![Developer](https://img.shields.io/badge/Developed%20by-WarenGonzaga-green.svg)](https://github.com/WarenGonzaga/)
+[![OS](https://img.shields.io/badge/OS-Windows-blue.svg)](https://github.com/WarenGonzaga/Passview)
+[![GitHub fork](https://img.shields.io/github/forks/WarenGonzaga/WiFi-Passview.svg)](https://github.com/WarenGonzaga/Passview)
+[![GitHub star](https://img.shields.io/github/stars/WarenGonzaga/WiFi-Passview.svg)](https://github.com/WarenGonzaga/Passview)
 [![GitHub release](https://img.shields.io/github/release/WarenGonzaga/WiFi-Passview.svg)](https://github.com/WarenGonzaga/WiFi-Passview/releases) 
 [![License](https://img.shields.io/github/license/WarenGonzaga/WiFi-Passview.svg)](https://github.com/WarenGonzaga/WiFi-Passview)
 
