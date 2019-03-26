@@ -75,22 +75,27 @@ $ gulp help
 
 If you want to contribute to this project just make a pull request and let me know what are the changes you want to merge with this master branch. I'm not asking for any format or what. I'm not also strict in any pull request to be sent here just to make sure that the code you're submitting should not affect the entire repo.
 
-# Author
+## Donate
 
-This project is created by **Waren Gonzaga** for educational purposes.
-- **Facebook**: https://facebook.com/warengonzagaofficialpage
-- **Twitter**: https://twitter.com/waren_gonzaga
-- **Website**: https://warengonzaga.com
-- **Email**: dev@warengonzaga.com
+If you love this project please consider to support the development by donating. I spend and waste my time just to save your time! Be a sponsor or backer of this project.<br>
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://paypal.me/warengonzagaofficial)
+[![Donate](https://img.shields.io/badge/Donate-Buy%20Me%20A%20Coffee-orange.svg)](https://www.buymeacoffee.com/warengonzagadev)<br>
+**Bitcoin:** 39qo5h3aic9K2aTFRzdGSVNuqtS8uMBKJu
 
 # License
 
 WiFi Passview is licensed under the MIT license. (http://opensource.org/licenses/MIT)
 
-# Donation
-**PayPal**: https://paypal.me/warengonzagaofficial<br>
-**Bitcoin**:<br>39qo5h3aic9K2aTFRzdGSVNuqtS8uMBKJu<br>
-**Bitcoin Cash**:<br>qqnmshtzdshcurvemam4lzpgh05k48ydscsr9lfzce<br>
-**Litecoin**:<br>LLSkoHehML9U95w7HETNtyXa4JPgxUb4f7<br>
-**Ethereum**:<br>0x2fc1eADC39aB6f7Cdc64a59AB8fe0Fc26a688969<br>
-**Electroneum**:<br>etnkLbeYmT6PT5SpN3UdHyUcBz42ezViWUgKFqGCMbruPqWekvNRuQRhdAkjTp8wBLEC6Eew8nAt1CVaDSw8XJ5z6BoYfZy3Zx
+# Author
+
+This project is created by **Waren Gonzaga** for educational purposes.
+
+- **Facebook**: https://facebook.com/warengonzagaofficialpage
+- **Twitter**: https://twitter.com/waren_gonzaga
+- **Website**: https://warengonzaga.com
+- **Email**: dev@warengonzaga.com
+
+---
+
+**</>** with **<3** by **Waren Gonzaga**
