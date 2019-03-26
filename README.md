@@ -80,7 +80,8 @@ If you want to contribute to this project just make a pull request and let me kn
 This project is created by **Waren Gonzaga** for educational purposes.
 - **Facebook**: https://facebook.com/warengonzagaofficialpage
 - **Twitter**: https://twitter.com/waren_gonzaga
-- **Email**: warengonzaga.dev@gmail.com
+- **Website**: https://warengonzaga.com
+- **Email**: dev@warengonzaga.com
 
 # License
 
