@@ -25,11 +25,7 @@ netsh wlan show profiles
 
 ## Usage
 
-1. Download the latest version **[here](https://github.com/WarenGonzaga/WiFi-Passview/releases)**.
-2. Extract the zip package and look for **``".bat"``** file, it should be in root directory.
-3. Run the **``".bat"``** file as administrator.
-4. Follow the on terminal screen instructions...
-5. Done!
+Download the repository and look for **``"wifi-passview-vX.X.X.bat"``** file and open it and run as administrator. All you have to do is to follow the on-screen instructions.
 
 Wanna use for WiFi Hacking? Visit this **blog**...
 
@@ -39,58 +35,13 @@ Here's the screeshot of the software...
 
 ![WiFi Password Preview](https://raw.githubusercontent.com/WarenGonzaga/wifi-passview/master/src/img/screenshot_01.png)
 
-## Custom Build
+## White Label / Personalize / Custom
 
-To build your custom WiFi Passview simply do the following...
-
-1. Create a new folder in your working directory.
-2. Open your terminal on that directory and clone this repository by typing;
-
-    ```bash
-    git clone https://github.com/WarenGonzaga/wifi-passview.git
-    ```
-
-3. Go to the **WiFi-Passview** using terminal or open a terminal manually on that directory.
-
-4. Type the following to install the devdependencies in your system;
-
-    ```bash
-    npm install
-    ```
-
-    Install gulp in your system.
-
-    ```bash
-    npm install gulp
-    ```
-
-    Install gulp globally in your system.
-
-    ```bash
-    npm install -g gulp
-    ```
-
-5. Go to **``"src"``** folder and edit **``"config.json"``** with your desired details.
-6. After that, go to the terminal and type the following;
-
-    ```bash
-    gulp
-    ```
-
-    or you can type...
-
-    ```bash
-    gulp build
-    ```
-
-7. You should see a batch file created on **``"prod"``** folder.
-8. Now, use that for your own need. Enjoy!
-
-_For more information about available commands just type..._
-
-```bash
-gulp help
-```
+* Download the repository
+* Do **``"npm install"``** and **``"npm install gulp-cli -g && npm install gulp -D"``**
+* After that, edit the **``"./src/config.json"``** file for your customization or personalization.
+* When you think you are satisfy, just do **``"gulp build"``** or **``"gulp"``** to initiate the building process.
+* If you want to reset the building process just do **``"gulp cleandev"``**.
 
 ## Contributing
 
@@ -99,6 +50,13 @@ Contributions are welcome, create a pull request to this repo and I will review 
 ## Issues
 
 If you're facing a problem in using WiFi Passview please let me know by creating an issue in this github repository. I'm happy to help you! Don't forget to provide some screenshot or error logs of it!
+
+## To Do
+
+* Code Refactor
+* Gulp Options
+* CI (Travis)
+* More... (have suggestions? let me know!)
 
 ## Community
 
