@@ -21,7 +21,7 @@ REM =============================
 REM Setup Variables
 REM =============================
 set appname=WiFi Passview
-set appvers=v1.0.1
+set appvers=v1.0.2
 set appstat=Beta
 set dev=Waren Gonzaga
 set desc=An open source batch script based program that can recover your WiFi Password easily in seconds.
