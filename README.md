@@ -31,9 +31,9 @@ Wanna use for WiFi Hacking? Visit this **blog**...
 
 ## Screenshots
 
-Here's the screeshot of the software...
+Here's the screeshot of the program...
 
-![WiFi Password Preview](https://raw.githubusercontent.com/WarenGonzaga/wifi-passview/master/src/img/screenshot_01.png)
+![Screenshot](./src/img/screenshot.jpg)
 
 ## White Label / Personalize / Custom
 
