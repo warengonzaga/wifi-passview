@@ -21,7 +21,7 @@ REM =============================
 REM Setup Variables
 REM =============================
 set appname=WiFi Passview
-set appvers=v1.0.0
+set appvers=v1.0.1
 set appstat=Beta
 set dev=Waren Gonzaga
 set desc=An open source batch script based program that can recover your WiFi Password easily in seconds.
@@ -29,7 +29,8 @@ set uicolor=a
 set infouicolor=b
 set erruicolor=c
 set cliN=$%appname%
-title %appname% PC Cleaner %appvers% - %appstat%
+set divider======================================
+title %appname% %appvers% - %appstat%
 
 @echo off
 color b
@@ -51,7 +52,7 @@ goto mainMenu
 cls
 color c
 echo # %divider%
-echo # %appname% PC Cleaner %appvers% - %appstat%
+echo # %appname% %appvers% - %appstat%
 echo # by %dev%
 echo # %divider%
 echo #
