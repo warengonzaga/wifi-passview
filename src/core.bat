@@ -1,4 +1,5 @@
-title %appname% PC Cleaner %appvers% - %appstat%
+set divider======================================
+title %appname% %appvers% - %appstat%
 
 @echo off
 color b
@@ -20,7 +21,7 @@ goto mainMenu
 cls
 color c
 echo # %divider%
-echo # %appname% PC Cleaner %appvers% - %appstat%
+echo # %appname% %appvers% - %appstat%
 echo # by %dev%
 echo # %divider%
 echo #
