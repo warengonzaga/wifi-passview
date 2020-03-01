@@ -42,7 +42,7 @@ const copydata = {
     'REM =============================',
     'REM WiFi Passview - <%= homepage %>',
     'REM <%= description %>',
-    'REM Version: <%= version %>',
+    'REM Version: <%= version %> [<%= status %>]',
     'REM Github: <%= github %>',
     'REM Licensed Under The MIT License: http://opensource.org/licenses/MIT',
     'REM Copyright (c) <%= new Date().getFullYear() %> <%= author %>',
