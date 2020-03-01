@@ -1,7 +1,7 @@
 REM =============================
 REM WiFi Passview - https://github.com/WarenGonzaga/wrn-passview
 REM An open source batch script based program that can recover your WiFi Password easily in seconds.
-REM Version: 2.0.0 [Karin]
+REM Version: 2.0.3 [Karin]
 REM Github: https://github.com/WarenGonzaga/wrn-passview
 REM Licensed Under The MIT License: http://opensource.org/licenses/MIT
 REM Copyright (c) 2020 Waren Gonzaga
@@ -21,7 +21,7 @@ REM =============================
 REM Setup Variables
 REM =============================
 set appname=WiFi Passview
-set appvers=v2.0.0
+set appvers=v2.0.3
 set appstat=Karin
 set dev=Waren Gonzaga
 set desc=An open source batch script based program that can recover your WiFi Password easily in seconds.
