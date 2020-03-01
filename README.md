@@ -34,7 +34,7 @@ This simple tool offers you the following features...
 * Save extracted passwords.
 * Additional options.
 * No manual reading of **``Key Content``**, the tool will do that for you!
-* Single file batch program.
+* Standalone batch program.
 * Customizable.
 
 ## Usage
