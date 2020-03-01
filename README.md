@@ -23,6 +23,20 @@ Basically, this is the shortcut and batch scripted file version of a popular WiF
 netsh wlan show profiles
 ```
 
+When you use this tool, you are able to extract the WiFi passwords stored on the target machine in just a seconds.
+
+## Features
+
+This simple tool offers you the following features...
+
+* Extract all available WiFi passwords stored in the target machine and can be done in just a seconds.
+* Extract password from specific target SSID.
+* Save extracted passwords.
+* Additional options.
+* No manual reading of **``Key Content``**, the tool will do that for you!
+* Single file batch program.
+* Customizable.
+
 ## Usage
 
 Download the repository and look for **``"wifi-passview-vX.X.X.bat"``** file and open it and run as administrator. All you have to do is to follow the on-screen instructions.
@@ -34,6 +48,14 @@ Wanna use for WiFi Hacking? Visit this **blog**...
 Here's the screeshot of the program...
 
 ![Screenshot](./src/img/screenshot.jpg)
+
+## In Action
+
+Here's how this tool works...
+
+![Screenshot](./src/img/wifi-passview-in-action.gif)
+
+This is version Karin at v2 an Elris Edition, Elris is a popular south korean KPOP girl group.
 
 ## White Label / Personalize / Custom
 
@@ -53,7 +75,6 @@ If you're facing a problem in using WiFi Passview please let me know by creating
 
 ## To Do
 
-* Code Refactor
 * Gulp Options
 * CI (Travis)
 * More... (have suggestions? let me know!)
