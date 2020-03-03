@@ -1,7 +1,7 @@
 REM =============================
 REM WiFi Passview - https://github.com/WarenGonzaga/wrn-passview
 REM An open source batch script based program that can recover your WiFi Password easily in seconds.
-REM Version: 2.0.3 [Karin]
+REM Version: 2.5.0 [Karin]
 REM Github: https://github.com/WarenGonzaga/wrn-passview
 REM Licensed Under The MIT License: http://opensource.org/licenses/MIT
 REM Copyright (c) 2020 Waren Gonzaga
@@ -21,7 +21,7 @@ REM =============================
 REM Setup Variables
 REM =============================
 set appname=WiFi Passview
-set appvers=v2.0.3
+set appvers=v2.5.0
 set appstat=Karin
 set dev=Waren Gonzaga
 set desc=An open source batch script based program that can recover your WiFi Password easily in seconds.
@@ -31,44 +31,12 @@ set erruicolor=c
 set cliN=$%appname%
 set divider======================================
 set tempdivider=================================================
-title %appname% %appvers% - %appstat% [Loading...]
-
-@echo off
-color b
-cls
-echo Administrative permissions required. Detecting permissions.
-ping localhost -n 2 >NUL
-net session >nul 2>&1
-if %errorLevel% == 0 (
-echo Administrator privileges found!
-echo Starting the program...
-ping localhost -n 2 >NUL
-goto mainMenu
-) else (
-cls
-color c
-echo # %divider%
-echo # %appname% %appvers% - %appstat%
-echo # by %dev%
-echo # %divider%
-echo #
-echo # ERROR * ERROR * ERROR * ERROR * ERROR * ERROR
-echo #
-echo # Current user permissions to execute this .bat file are inadequate.
-echo # This .bat file must be run with administrative privileges.
-echo # Close this program and run it as administrator.
-echo # Contact the developer to assist you...
-echo #
-echo # ERROR * ERROR * ERROR * ERROR * ERROR * ERROR
-echo #
-pause
-exit
-)
 
 rem =============================
 rem Main Menu
 rem =============================
 :mainMenu
+del null
 cls
 title %appname% %appvers% - %appstat% [Main Menu]
 echo # %divider%
@@ -79,12 +47,12 @@ color %uicolor%
 echo # %desc%
 echo # %divider%
 echo #
-echo # Automated ....... [1]
-echo # Manual .......... [2]
-echo # Donate .......... [3]
-echo # Credits ......... [4]
-echo # Options ......... [5]
-echo # Exit ............ [6]
+echo # Automated (Default) ....... [1]
+echo # Manual .................... [2]
+echo # Donate .................... [3]
+echo # Credits ................... [4]
+echo # Options ................... [5]
+echo # Exit ...................... [6]
 echo #
 set /p "mainMenu=# $WiFiPassview> " || set mainMenu=1
 if %mainMenu%==1 goto autoMode
@@ -93,6 +61,7 @@ if %mainMenu%==3 goto donate
 if %mainMenu%==4 goto credits
 if %mainMenu%==5 goto options
 if %mainMenu%==6 goto exitProgram
+goto fail4
 pause>null
 
 rem =============================
@@ -117,6 +86,17 @@ echo # %divider%
 echo # %appname% %appvers% - %appstat%
 echo # by %dev%
 echo # %divider%
+echo # Checking for wireless interface...
+netsh wlan show profiles | findstr "All"
+if %errorlevel%==1 goto fail3
+cls
+title %appname% %appvers% - %appstat% [Automated Mode]
+color %uicolor%
+echo # %divider%
+echo # %appname% %appvers% - %appstat%
+echo # by %dev%
+echo # %divider%
+echo # Checking for wireless interface...
 netsh wlan show profiles | findstr "All" > temp.txt
 echo # Available SSID in this Machine
 type temp.txt
@@ -127,8 +107,7 @@ echo setlocal enabledelayedexpansion >> helper.bat
 echo for /f "tokens=5*" %%%%i in (temp.txt) do ( set val=%%%%i %%%%j >> helper.bat
 echo if "!val:~-1!" == " " set val=!val:~0,-1! >> helper.bat
 echo echo !val! ^>^> final.txt) >> helper.bat
-echo mkdir "%userprofile%"\Desktop\WiFi-Passview >> helper.bat
-echo for /f "tokens=*" %%%%i in (final.txt) do @echo SSID: %%%%i ^>^> "%userprofile%"\Desktop\WiFi-Passview\creds.txt ^& echo # %tempdivider% ^>^> "%userprofile%"\Desktop\WiFi-Passview\creds.txt ^& netsh wlan show profiles name=%%%%i key=clear ^| findstr /c:"Key Content" ^>^> "%userprofile%"\Desktop\WiFi-Passview\creds.txt ^& echo # %tempdivider% ^>^> "%userprofile%"\Desktop\WiFi-Passview\creds.txt ^& echo # Key content is the password of your target SSID. ^>^> "%userprofile%"\Desktop\WiFi-Passview\creds.txt ^& echo # %tempdivider% ^>^> "%userprofile%"\Desktop\WiFi-Passview\creds.txt >> helper.bat
+echo for /f "tokens=*" %%%%i in (final.txt) do @echo SSID: %%%%i ^>^> creds.txt ^& echo # %tempdivider% ^>^> creds.txt ^& netsh wlan show profiles name=%%%%i key=clear ^| findstr /c:"Key Content" ^>^> creds.txt ^& echo # %tempdivider% ^>^> creds.txt ^& echo # Key content is the password of your target SSID. ^>^> creds.txt ^& echo # %tempdivider% ^>^> creds.txt >> helper.bat
 echo del /q temp.txt final.txt >> helper.bat
 echo exit >> helper.bat
 echo # Done...
@@ -140,6 +119,7 @@ echo # Deleting temporary files...
 ping localhost -n 3 >NUL
 del /q helper.bat
 echo # Done...
+del null
 ping localhost -n 2 >NUL
 cls
 title %appname% %appvers% - %appstat% [Automated Mode]
@@ -149,9 +129,7 @@ echo # %appname% %appvers% - %appstat%
 echo # by %dev%
 echo # %divider%
 echo #
-echo # WiFi credentials has been saved to "Desktop/WiFi-Passview/creds.txt", Press any key to open it in the file explorer...
-pause>null
-start explorer "%userprofile%"\Desktop\WiFi-Passview
+echo # WiFi credentials has been saved to "creds.txt", Press any key to continue... (except power button lol)
 pause>null
 goto mainMenu
 
@@ -166,10 +144,45 @@ echo # %divider%
 echo # %appname% %appvers% - %appstat%
 echo # by %dev%
 echo # %divider%
-echo # THE FOLLOWING WIFI PROFILES BELOW ARE HACKABLE!
+echo # Ready to scan available wifi profiles in this machine?
+echo #
+echo # Yes, continue ............. [1]
+echo # Back to Main Menu ..........[2]
+echo # 
+set /p "confirmScan=# $WiFiPassview> " || set confirmScan=2
+if %confirmScan%==1 goto manualConfirm
+if %confirmScan%==2 goto mainMenu
+goto fail4
+pause>null
+
+rem =============================
+rem Manual Mode: Confirm Scan
+rem =============================
+:manualConfirm
+netsh wlan show profiles | findstr "All"
+if %errorlevel%==1 goto fail3
+goto mainualContinue
+
+rem =============================
+rem Manual Mode: Continue
+rem =============================
+:mainualContinue
+cls
+title %appname% %appvers% - %appstat% [Manual Mode]
+color %uicolor%
+echo # %divider%
+echo # %appname% %appvers% - %appstat%
+echo # by %dev%
+echo # %divider%
+echo # THE FOLLOWING WIFI PROFILES BELOW ARE HACKABLE
+echo # %divider%
 netsh wlan show profiles
+echo # %divider%
 echo # Please enter the SSID of target WiFi
-set /p "ssidname=# $WiFiPassview> "
+echo # Type "cancel" or hit enter to go back (default)
+echo #
+set /p "ssidname=# $WiFiPassview> " || set ssidname=cancel
+if %ssidname%==cancel goto mainMenu
 cls
 netsh wlan show profiles name=%ssidname%
 if %errorlevel%==1 goto fail1
@@ -187,28 +200,31 @@ echo # %tempdivider%
 echo # Key content is the password of your target SSID.
 echo # %tempdivider%
 echo # 
-echo # Save to creds.txt ............. [1]
-echo # Back to Main Menu ............. [2]
+echo # Save to creds.txt .................................. [1]
+echo # Ignore and back to Main Menu (default) ............. [2]
+echo #
+echo # Note: If you hit enter or enter an invalid value the extracted password will not be saved.
 echo #
 set /p "manualMode=# $WiFiPassview> " || set manualMode=2
 if %manualMode%==1 goto manualSave
 if %manualMode%==2 goto manualDel
+goto fail4
 pause>null
 
 rem =============================
 rem Manual: Save
 rem =============================
 :manualSave
+del null
 cls
 title %appname% %appvers% - %appstat%
-mkdir "%userprofile%"/Desktop/WiFi-Passview
-echo # SSID: %ssidname% >> "%userprofile%"/Desktop/WiFi-Passview/creds.txt
-echo # %tempdivider% >> "%userprofile%"/Desktop/WiFi-Passview/creds.txt
-netsh wlan show profiles name=%ssidname% key=clear | findstr /c:"Key Content" >> "%userprofile%"/Desktop/WiFi-Passview/creds.txt
-echo # %tempdivider% >> "%userprofile%"/Desktop/WiFi-Passview/creds.txt
-echo # Key content is the password of your target SSID. >> "%userprofile%"/Desktop/WiFi-Passview/creds.txt
-echo # %tempdivider% >> "%userprofile%"/Desktop/WiFi-Passview/creds.txt
-del temp.txt
+echo # SSID: %ssidname% >> creds.txt
+echo # %tempdivider% >> creds.txt
+netsh wlan show profiles name=%ssidname% key=clear | findstr /c:"Key Content" >> creds.txt
+echo # %tempdivider% >> creds.txt
+echo # Key content is the password of your target SSID. >> creds.txt
+echo # %tempdivider% >> creds.txt
+del temp.txt null
 cls
 echo # %divider%
 echo # %appname% %appvers% - %appstat%
@@ -218,18 +234,20 @@ color %uicolor%
 echo # %desc%
 echo # %divider%
 echo #
-echo # WiFi credentials has been saved to "Desktop/WiFi-Passview/creds.txt", Press any key to open it in the file explorer...
+echo # WiFi credentials has been saved to "creds.txt", Press any key to open it in the file explorer...
 pause>null
-start explorer "%userprofile%"\Desktop\WiFi-Passview
+del null
+start explorer %cd%
 goto mainMenu
 
 rem =============================
 rem Manual: Delete
 rem =============================
 :manualDel
+del null
 cls
 title %appname% %appvers% - %appstat%
-del temp.txt
+del temp.txt null
 echo # %divider%
 echo # %appname% %appvers% - %appstat%
 echo # by %dev%
@@ -240,12 +258,14 @@ echo # %divider%
 echo #
 echo # Extracted password has been deleted! Press any key to continue... (except power button lol)
 pause>null
+del null
 goto mainMenu
 
 rem =============================
 rem Donate
 rem =============================
 :donate
+del null
 cls
 title %appname% %appvers% - %appstat% [Donate]
 echo # %divider%
@@ -268,6 +288,7 @@ set /p "donate=# $WiFiPassview> " || set donate=3
 if %donate%==1 goto buymeacoffee
 if %donate%==2 goto paypal
 if %donate%==3 goto mainMenu
+goto fail4
 pause>null
 
 rem =============================
@@ -288,6 +309,7 @@ rem =============================
 rem Credits
 rem =============================
 :credits
+del null
 cls
 title %appname% %appvers% - %appstat% [Credits]
 echo # %divider%
@@ -310,6 +332,7 @@ rem =============================
 rem Options
 rem =============================
 :options
+del null
 cls
 title %appname% %appvers% - %appstat% [Options]
 echo # %divider%
@@ -318,26 +341,31 @@ echo # by %dev%
 echo # %divider%
 color %uicolor%
 echo #
-echo # Delete "creds.txt" ....... [1]
-echo # Locate "creds.txt" ....... [2]
-echo # Elris? Here I Am ......... [3]
-echo # Back to Main Menu ........ [4]
+echo # Delete "creds.txt" ............ [1]
+echo # Locate "creds.txt" ............ [2]
+echo # Open "creds.txt" in Notepad ... [3]
+echo # Elris? Here I Am .............. [4]
+echo # Back to Main Menu ............. [5]
 echo #
-set /p "options= # $WiFiPassview> " || set options=2
+set /p "options= # $WiFiPassview> " || set options=5
 if %options%==1 goto deleteCreds
 if %options%==2 goto locateCreds
-if %options%==3 goto elris
-if %options%==4 goto mainMenu
+if %options%==3 goto notepadCreds
+if %options%==4 goto elris
+if %options%==5 goto mainMenu
+goto fail4
 pause>null
 
 rem =============================
 rem Options: Delete Creds
 rem =============================
 :deleteCreds
+del null
+type creds.txt
+if %errorlevel%==1 goto fail2
 cls
 title %appname% %appvers% - %appstat%
-del /q "%userprofile%"\Desktop\WiFi-Passview\creds.txt
-rmdir "%userprofile%"\Desktop\WiFi-Passview
+del /q creds.txt
 cls
 echo # %divider%
 echo # %appname% %appvers% - %appstat%
@@ -355,9 +383,22 @@ rem =============================
 rem Options: Locate Creds
 rem =============================
 :locateCreds
-type "%userprofile%"\Desktop\WiFi-Passview\creds.txt
+del null
+cls
+type creds.txt
 if %errorlevel%==1 goto fail2
-start explorer "%userprofile%"\Desktop\WiFi-Passview
+start explorer %cd%
+goto options
+
+rem =============================
+rem Options: Open Creds in Notepad
+rem =============================
+:notepadCreds
+del null
+cls
+type creds.txt
+if %errorlevel%==1 goto fail2
+start notepad creds.txt
 goto options
 
 rem =============================
@@ -368,9 +409,10 @@ start https://www.youtube.com/watch?v=iPAIlZM1VUU
 goto options
 
 rem =============================
-rem Manual: Fail Message
+rem Manual: Fail Message (SSID)
 rem =============================
 :fail1
+del null
 cls
 title %appname% %appvers% - %appstat% [Error]
 color %erruicolor%
@@ -389,9 +431,10 @@ pause>null
 goto mainMenu
 
 rem =============================
-rem Options: Fail Message
+rem Options: Fail Message (creds.txt)
 rem =============================
 :fail2
+del null
 cls
 title %appname% %appvers% - %appstat% [Error]
 color %erruicolor%
@@ -400,7 +443,8 @@ echo # %appname% %appvers% - %appstat%
 echo # by %dev%
 echo # %divider%
 echo # ERROR ERROR ERROR (FAIL)
-echo # The location of "creds.txt" does not exist!
+echo # The file "creds.txt" does not exist!
+echo # Run automated mode or manual mode first and save extracted passwords in "creds.txt" file.
 echo # Please try again or contact the developer for support...
 echo # %divider%
 echo #
@@ -409,7 +453,47 @@ pause>null
 goto options
 
 rem =============================
+rem Manual: Fail Message (Wireless Interface)
+rem =============================
+:fail3
+del null
+cls
+title %appname% %appvers% - %appstat% [Error]
+color %erruicolor%
+echo # %divider%
+echo # %appname% %appvers% - %appstat%
+echo # by %dev%
+echo # %divider%
+echo # ERROR ERROR ERROR (FAIL)
+echo # No Wireless Interface Detected!!!
+echo # %divider%
+echo #
+echo # Press any key to continue... (except power button lol)
+pause>null
+goto mainMenu
+
+rem =============================
+rem Program Error
+rem =============================
+:fail4
+del null
+cls
+title %appname% %appvers% - %appstat% [Error]
+color %erruicolor%
+echo # %divider%
+echo # %appname% %appvers% - %appstat%
+echo # by %dev%
+echo # %divider%
+echo # Invalid option! Please try again...
+echo # %divider%
+echo #
+echo # Press any key to continue... (except power button lol)
+pause>null
+goto mainMenu
+
+rem =============================
 rem Exit Option Function
 rem =============================
 :exitProgram
+del null
 exit
