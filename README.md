@@ -11,9 +11,17 @@
 
 _**Disclaimer**: WiFi Passview is **NOT** designed for malicious use! Please use this program responsibly!_
 
+---
+
+## KitPloit.com
+
+This project has been featured on KitPloit a popular Hacker's Tools Website. [Visit KitPloit](https://www.kitploit.com/2020/03/wifi-passview-v20-open-source-batch.html)
+
 ## ZSecurity.org
 
 This project is posted on a cyber security educational website called zsecurity.org you should visit this project here for more information: <https://zsecurity.org>
+
+---
 
 ## How it Works
 
@@ -34,14 +42,15 @@ This simple tool offers you the following features...
 * Save extracted passwords.
 * Additional options.
 * No manual reading of **``Key Content``**, the tool will do that for you!
+* No need admin rights to run the program.
 * Standalone batch program.
 * Customizable.
 
 ## Usage
 
-Download the repository and look for **``"wifi-passview-vX.X.X.bat"``** file and open it and run as administrator. All you have to do is to follow the on-screen instructions.
+Download the repository and look for **``"wifi-passview-vX.X.X.bat"``** file and run it as ordinary ``*.bat`` file (_no need to run it as administrator_). All you have to do is to follow the on-screen instructions.
 
-Wanna use for WiFi Hacking? Visit this **blog**...
+Wanna use for WiFi Hacking? Visit this BMC [blog](https://www.buymeacoffee.com/p/40225)...
 
 ## Screenshots
 
@@ -57,13 +66,15 @@ Here's how this tool works...
 
 Don't forget to like, share, and subscribe to my channel!
 
-## White Label / Personalize / Custom
+## White Label / Personalize / Custom / Development
 
 * Download the repository
 * Do **``"npm install"``** and **``"npm install gulp-cli -g && npm install gulp -D"``**
 * After that, edit the **``"./src/config.json"``** file for your customization or personalization.
 * When you think you are satisfy, just do **``"gulp build"``** or **``"gulp"``** to initiate the building process.
 * If you want to reset the building process just do **``"gulp cleandev"``**.
+* If you are editing the **``"./src/core.bat"``** you can use **``"gulp test"``**  it is a combination of **``"gulp build"``** and **``"gulp cleandev"``** so you can quickly quality check the production build.
+* Do **``"gulp --tasks"``** to see all available **``"gulp"``** commands.
 
 ## Contributing
 
@@ -76,7 +87,9 @@ If you're facing a problem in using WiFi Passview please let me know by creating
 ## To Do
 
 * Gulp Options
+* Email Options
 * CI (Travis)
+* Wireless Network Reporting
 * More... (have suggestions? let me know!)
 
 ## Community
