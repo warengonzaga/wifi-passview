@@ -111,6 +111,7 @@ function cleanroot() {
 // gulp series
 const build = gulp.series([whitelabel, copyright, delcore, copytoroot]);
 const cleandev = gulp.series([cleanprod, cleanroot]);
+const test = gulp.series([cleanprod, cleanroot, whitelabel, copyright, delcore, copytoroot]);
 
 // gulp commands
 exports.whitelabel = whitelabel;
@@ -121,4 +122,5 @@ exports.cleanprod = cleanprod;
 exports.cleanroot = cleanroot;
 exports.cleandev = cleandev;
 exports.build = build;
+exports.test = test;
 exports.default = build;
