@@ -105,6 +105,12 @@ If you love this project please consider to support the development by means of 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg?style=for-the-badge)](https://paypal.me/warengonzagaofficial)
 [![Support](https://img.shields.io/badge/Support-Buy%20Me%20A%20Coffee-orange.svg?style=for-the-badge)](https://www.buymeacoffee.com/warengonzaga)
 
+## Supporters and Backers
+
+* ernest bigelow
+
+Wanna see your name here? [Just buy me a coffee](https://www.buymeacoffee.com/warengonzaga)!
+
 ## License
 
 WiFi Passview is licensed under MIT - <https://opensource.org/licenses/MIT>
