@@ -11,15 +11,17 @@
 
 _**Disclaimer**: WiFi Passview is **NOT** designed for malicious use! Please use this program responsibly!_
 
+## Featured By
+
 ---
 
 ## KitPloit.com
 
-This project has been featured on KitPloit a popular Hacker's Tools Website. [Visit KitPloit](https://www.kitploit.com/2020/03/wifi-passview-v20-open-source-batch.html)
+This project has been featured on KitPloit a popular Hacker's Tools Website. [Visit KitPloit.com](https://www.kitploit.com/2020/03/wifi-passview-v20-open-source-batch.html)
 
-## ZSecurity.org
+## Hakin9.org
 
-This project is posted on a cyber security educational website called zsecurity.org you should visit this project here for more information: <https://zsecurity.org>
+This project has been featured on Hakin9 a popular hacking and cybersecurity magazine company. [Visit Hakin9.org](https://hakin9.org/wifi-passview-an-open-source-batch-script-based-wifi-passview-for-windows)
 
 ---
 
