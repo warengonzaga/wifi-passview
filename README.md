@@ -13,17 +13,13 @@ _**Disclaimer**: WiFi Passview is **NOT** designed for malicious use! Please use
 
 ## Featured By
 
----
-
-## KitPloit.com
+### KitPloit.com
 
 This project has been featured on KitPloit a popular Hacker's Tools Website. [Visit KitPloit.com](https://www.kitploit.com/2020/03/wifi-passview-v20-open-source-batch.html)
 
-## Hakin9.org
+### Hakin9.org
 
 This project has been featured on Hakin9 a popular hacking and cybersecurity magazine company. [Visit Hakin9.org](https://hakin9.org/wifi-passview-an-open-source-batch-script-based-wifi-passview-for-windows)
-
----
 
 ## How it Works
 
