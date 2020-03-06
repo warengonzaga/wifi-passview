@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/github/license/WarenGonzaga/wifi-passview.svg?style=for-the-badge)](https://github.com/WarenGonzaga/WiFi-Passview)
 [![Powered By](https://img.shields.io/badge/Powered%20By-GulpJS-orange.svg?style=for-the-badge)](https://gulpjs.com)
 
-**WiFi Passview** is an open source batch script based program that can recover your WiFi Password easily in seconds. This is for Windows OS only. Basically, this scripted program has the same function as other passview softwares such as webpassview and mailpassview.
+**WiFi Passview** is an open-source batch script-based program that can recover your WiFi Password easily in seconds. This is for Windows OS only. Basically, this scripted program has the same function as other passview software such as webpassview and mailpassview. [Visit Wiki](https://github.com/WarenGonzaga/wifi-passview/wiki)
 
 _**Disclaimer**: WiFi Passview is **NOT** designed for malicious use! Please use this program responsibly!_
 
@@ -23,13 +23,15 @@ This project has been featured on Hakin9 a popular hacking and cybersecurity mag
 
 ## How it Works
 
-Basically, this is the shortcut and batch scripted file version of a popular WiFi password manager viewing method using command prompt. This is how it works...
+Basically, this is the shortcut and batch scripted file version of a popular WiFi password manager viewing method using the command prompt. This is how it works...
 
 ```bash
 netsh wlan show profiles
 ```
 
-When you use this tool, you are able to extract the WiFi passwords stored on the target machine in just a seconds.
+When you use this tool, you are able to extract the WiFi passwords stored on the target machine in just seconds.
+
+To learn more [visit wiki](https://github.com/WarenGonzaga/wifi-passview/wiki) page...
 
 ## Features
 
@@ -73,6 +75,14 @@ Don't forget to like, share, and subscribe to my channel!
 * If you want to reset the building process just do **``"gulp cleandev"``**.
 * If you are editing the **``"./src/core.bat"``** you can use **``"gulp test"``**  it is a combination of **``"gulp build"``** and **``"gulp cleandev"``** so you can quickly quality check the production build.
 * Do **``"gulp --tasks"``** to see all available **``"gulp"``** commands.
+
+## FAQs
+
+**Q**: Why you don't use the built-in ``netsh wlan`` export command?
+
+> _I'm aware of that command, the only reason why I use ``findstr`` instead of that command is that to make the tool more user-level that does not require any admin rights. For example, if you are about to use the tool in a machine that you don't own then you're not able to use the tool. Got the idea? If the tool does not require admin rights then we can avoid the UAC prompt and we can use the tool more efficiently, the command ``netsh wlan show profiles`` do not require admin rights that's why we can still use that and capture the data and save it to file using the ``findstr`` command. Brilliant?_
+
+Visit [FAQ section](https://github.com/WarenGonzaga/wifi-passview/wiki/Frequently-Asked-Questions) for more information.
 
 ## Contributing
 
