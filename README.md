@@ -84,7 +84,7 @@ Looking for the official **``"wifi-passview-vX.X.X.exe"``** version and wanna su
 
 ![Premium](./src/img/premium.jpg)
 
-[![Support](https://img.shields.io/badge/Download-Premium%20Version-green.svg?style=for-the-badge)](https://www.buymeacoffee.com/warengonzaga)
+[![Support](https://img.shields.io/badge/Download-Premium%20Version-green.svg?style=for-the-badge)](https://bmc.xyz/l/wifipassview)
 
 ## FAQs
 
