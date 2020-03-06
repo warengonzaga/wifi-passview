@@ -7,6 +7,8 @@
 [![License](https://img.shields.io/github/license/WarenGonzaga/wifi-passview.svg?style=for-the-badge)](https://github.com/WarenGonzaga/WiFi-Passview)
 [![Powered By](https://img.shields.io/badge/Powered%20By-GulpJS-orange.svg?style=for-the-badge)](https://gulpjs.com)
 
+![Official Icon](./src/img/official-icon.png)
+
 **WiFi Passview** is an open-source batch script-based program that can recover your WiFi Password easily in seconds. This is for Windows OS only. Basically, this scripted program has the same function as other passview software such as webpassview and mailpassview. [Visit Wiki](https://github.com/WarenGonzaga/wifi-passview/wiki)
 
 _**Disclaimer**: WiFi Passview is **NOT** designed for malicious use! Please use this program responsibly!_
@@ -75,6 +77,14 @@ Don't forget to like, share, and subscribe to my channel!
 * If you want to reset the building process just do **``"gulp cleandev"``**.
 * If you are editing the **``"./src/core.bat"``** you can use **``"gulp test"``**  it is a combination of **``"gulp build"``** and **``"gulp cleandev"``** so you can quickly quality check the production build.
 * Do **``"gulp --tasks"``** to see all available **``"gulp"``** commands.
+
+## Premium Version
+
+Looking for the official **``"wifi-passview-vX.X.X.exe"``** version and wanna support the project?
+
+![Premium](./src/img/premium.jpg)
+
+[![Support](https://img.shields.io/badge/Download-Premium%20Version-green.svg?style=for-the-badge)](https://www.buymeacoffee.com/warengonzaga)
 
 ## FAQs
 
