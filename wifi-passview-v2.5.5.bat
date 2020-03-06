@@ -1,7 +1,7 @@
 REM =============================
 REM WiFi Passview - https://github.com/WarenGonzaga/wrn-passview
 REM An open source batch script based program that can recover your WiFi Password easily in seconds.
-REM Version: 2.5.0 [Karin]
+REM Version: 2.5.5 [Karin]
 REM Github: https://github.com/WarenGonzaga/wrn-passview
 REM Licensed Under The MIT License: http://opensource.org/licenses/MIT
 REM Copyright (c) 2020 Waren Gonzaga
@@ -21,7 +21,7 @@ REM =============================
 REM Setup Variables
 REM =============================
 set appname=WiFi Passview
-set appvers=v2.5.0
+set appvers=v2.5.5
 set appstat=Karin
 set dev=Waren Gonzaga
 set desc=An open source batch script based program that can recover your WiFi Password easily in seconds.
@@ -344,15 +344,17 @@ echo #
 echo # Delete "creds.txt" ............ [1]
 echo # Locate "creds.txt" ............ [2]
 echo # Open "creds.txt" in Notepad ... [3]
-echo # Elris? Here I Am .............. [4]
-echo # Back to Main Menu ............. [5]
+echo # Premium Version ................[4]
+echo # Elris? Here I Am .............. [5]
+echo # Back to Main Menu ............. [6]
 echo #
 set /p "options= # $WiFiPassview> " || set options=5
 if %options%==1 goto deleteCreds
 if %options%==2 goto locateCreds
 if %options%==3 goto notepadCreds
-if %options%==4 goto elris
-if %options%==5 goto mainMenu
+if %options%==4 goto premium 
+if %options%==5 goto elris
+if %options%==6 goto mainMenu
 goto fail4
 pause>null
 
@@ -399,6 +401,13 @@ cls
 type creds.txt
 if %errorlevel%==1 goto fail2
 start notepad creds.txt
+goto options
+
+rem =============================
+rem Options: Premium
+rem =============================
+:premium
+start https://bmc.xyz/l/wifipassview
 goto options
 
 rem =============================
