@@ -15,13 +15,7 @@ _**Disclaimer**: WiFi Passview is **NOT** designed for malicious use! Please use
 
 ## Featured By
 
-### KitPloit.com
-
-This project has been featured on KitPloit a popular Hacker's Tools Website. [Visit KitPloit.com](https://www.kitploit.com/2020/03/wifi-passview-v20-open-source-batch.html)
-
-### Hakin9.org
-
-This project has been featured on Hakin9 a popular hacking and cybersecurity magazine company. [Visit Hakin9.org](https://hakin9.org/wifi-passview-an-open-source-batch-script-based-wifi-passview-for-windows)
+The project has been featured in some popular cybersecurity websites such as **[KitPloit.com](https://www.kitploit.com/2020/03/wifi-passview-v20-open-source-batch.html)**, **[Hakin9.org](https://hakin9.org/wifi-passview-an-open-source-batch-script-based-wifi-passview-for-windows)**, and **[Pentest Magazine](https://pentestmag.com/wifi-passview)**.
 
 ## How it Works
 
@@ -52,7 +46,9 @@ This simple tool offers you the following features...
 
 Download the repository and look for **``"wifi-passview-vX.X.X.bat"``** file and run it as ordinary ``*.bat`` file (_no need to run it as administrator_). All you have to do is to follow the on-screen instructions.
 
-Wanna use for WiFi Hacking? Visit this BMC [blog](https://www.buymeacoffee.com/p/40225)...
+Read the official blog on **[How to Use WiFi Passview](https://warengonzaga.com/wifi-passview-for-windows-os)**.
+
+_Wanna use for WiFi Hacking? Visit this [exclusive post from the author](https://www.buymeacoffee.com/p/40225)._
 
 ## Screenshots
 
