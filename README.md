@@ -122,7 +122,7 @@ If you love this project please consider to support the development by means of 
 
 ## Supporters and Backers
 
-* ernest bigelow
+* ernest bigelow, nanantakeshi
 
 Wanna see your name here? [Just buy me a coffee](https://www.buymeacoffee.com/warengonzaga)!
 
