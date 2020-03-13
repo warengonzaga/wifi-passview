@@ -134,7 +134,7 @@ WiFi Passview is licensed under MIT - <https://opensource.org/licenses/MIT>
 
 This project is created by **Waren Gonzaga** for educational purposes.
 
-* **Facebook:** <https://facebook.com/warengonzagaofficialpage>
+* **Facebook:** <https://facebook.com/warengonzagaofficial>
 * **Twitter:** <https://twitter.com/warengonzaga>
 * **Website:** <https://warengonzaga.com>
 * **Email:** dev(at)warengonzaga[.]com
