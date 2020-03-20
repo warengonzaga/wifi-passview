@@ -27,7 +27,7 @@ netsh wlan show profiles
 
 When you use this tool, you are able to extract the WiFi passwords stored on the target machine in just seconds.
 
-To learn more [visit wiki](https://github.com/warengonzaga/wifi-passview/wiki) page...
+To learn more [visit Wiki](https://github.com/warengonzaga/wifi-passview/wiki) page...
 
 ## Features
 
