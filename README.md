@@ -1,15 +1,15 @@
 # WiFi Passview [![Developed by Waren Gonzaga](https://img.shields.io/badge/Developed%20by-Waren%20Gonzaga-blue.svg?longCache=true&style=for-the-badge)](https://facebook.com/warengonzagaofficial)
 
-[![OS](https://img.shields.io/badge/OS-Windows-blue.svg?style=for-the-badge)](https://github.com/WarenGonzaga/Passview)
-[![Github Release](https://img.shields.io/github/release/WarenGonzaga/wifi-passview.svg?style=for-the-badge)](https://github.com/WarenGonzaga/WiFi-Passview/releases)
-[![Github Star](https://img.shields.io/github/stars/WarenGonzaga/wifi-passview.svg?style=for-the-badge)](https://github.com/WarenGonzaga/Passview)
-[![Github Fork](https://img.shields.io/github/forks/WarenGonzaga/wifi-passview.svg?style=for-the-badge)](https://github.com/WarenGonzaga/Passview)
-[![License](https://img.shields.io/github/license/WarenGonzaga/wifi-passview.svg?style=for-the-badge)](https://github.com/WarenGonzaga/WiFi-Passview)
+[![OS](https://img.shields.io/badge/OS-Windows-blue.svg?style=for-the-badge)](https://github.com/warengonzaga/wifi-passview)
+[![Github Release](https://img.shields.io/github/release/warengonzaga/wifi-passview.svg?style=for-the-badge)](https://github.com/warengonzaga/wifi-passview/releases)
+[![Github Star](https://img.shields.io/github/stars/warengonzaga/wifi-passview.svg?style=for-the-badge)](https://github.com/warengonzaga/wifi-passview)
+[![Github Fork](https://img.shields.io/github/forks/warengonzaga/wifi-passview.svg?style=for-the-badge)](https://github.com/warengonzaga/wifi-passview)
+[![License](https://img.shields.io/github/license/warengonzaga/wifi-passview.svg?style=for-the-badge)](https://github.com/warengonzaga/wifi-passview)
 [![Powered By](https://img.shields.io/badge/Powered%20By-GulpJS-orange.svg?style=for-the-badge)](https://gulpjs.com)
 
 ![Official Icon](./src/img/official-icon.png)
 
-**WiFi Passview** is an open-source batch script-based program that can recover your WiFi Password easily in seconds. This is for Windows OS only. Basically, this scripted program has the same function as other passview software such as webpassview and mailpassview. [Visit Wiki](https://github.com/WarenGonzaga/wifi-passview/wiki)
+**WiFi Passview** is an open-source batch script-based program that can recover your WiFi Password easily in seconds. This is for Windows OS only. Basically, this scripted program has the same function as other passview software such as webpassview and mailpassview. [Visit Wiki](https://github.com/warengonzaga/wifi-passview/wiki)
 
 _**Disclaimer**: WiFi Passview is **NOT** designed for malicious use! Please use this program responsibly!_
 
@@ -27,7 +27,7 @@ netsh wlan show profiles
 
 When you use this tool, you are able to extract the WiFi passwords stored on the target machine in just seconds.
 
-To learn more [visit wiki](https://github.com/WarenGonzaga/wifi-passview/wiki) page...
+To learn more [visit wiki](https://github.com/warengonzaga/wifi-passview/wiki) page...
 
 ## Features
 
@@ -88,7 +88,7 @@ Looking for the official **``"wifi-passview-vX.X.X.exe"``** version and wanna su
 
 > _I'm aware of that command, the only reason why I use ``findstr`` instead of that command is that to make the tool more user-level that does not require any admin rights. For example, if you are about to use the tool in a machine that you don't own then you're not able to use the tool. Got the idea? If the tool does not require admin rights then we can avoid the UAC prompt and we can use the tool more efficiently, the command ``netsh wlan show profiles`` do not require admin rights that's why we can still use that and capture the data and save it to file using the ``findstr`` command. Brilliant?_
 
-Visit [FAQ section](https://github.com/WarenGonzaga/wifi-passview/wiki/Frequently-Asked-Questions) for more information.
+Visit [FAQ section](https://github.com/warengonzaga/wifi-passview/wiki/Frequently-Asked-Questions) for more information.
 
 ## Contributing
 
