@@ -1,11 +1,13 @@
 {
     "filename":"wifi-passview",
     "title":"WiFi Passview",
-    "version":"v2.5.5",
+    "version":"v2.8.0",
     "status":"Karin",
     "dev":"Waren Gonzaga",
     "description":"An open source batch script based program that can recover your WiFi Password easily in seconds.",
     "uicolor":"a",
     "infouicolor":"b",
-    "erruicolor":"c"
+    "erruicolor":"c",
+    "langall":"All",
+    "langkeycontent":"Key Content"
 }

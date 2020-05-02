@@ -95,9 +95,8 @@ If you're facing a problem in using WiFi Passview please let me know by creating
 
 ## To Do
 
-* Gulp Options
+* Moving to NodeJS from GulpJS
 * Email Options
-* CI (Travis)
 * Wireless Network Reporting
 * Extract WiFi Password Across Network (experimental)
 * More... (have suggestions? let me know!)

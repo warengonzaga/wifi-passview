@@ -1,7 +1,7 @@
 REM =============================
 REM WiFi Passview - https://github.com/WarenGonzaga/wrn-passview
 REM An open source batch script based program that can recover your WiFi Password easily in seconds.
-REM Version: 2.5.5 [Karin]
+REM Version: 2.8.0 [Karin]
 REM Github: https://github.com/WarenGonzaga/wrn-passview
 REM Licensed Under The MIT License: http://opensource.org/licenses/MIT
 REM Copyright (c) 2020 Waren Gonzaga
@@ -21,13 +21,15 @@ REM =============================
 REM Setup Variables
 REM =============================
 set appname=WiFi Passview
-set appvers=v2.5.5
+set appvers=v2.8.0
 set appstat=Karin
 set dev=Waren Gonzaga
 set desc=An open source batch script based program that can recover your WiFi Password easily in seconds.
 set uicolor=a
 set infouicolor=b
 set erruicolor=c
+set langall=All
+set langkeycontent=Key Content
 set cliN=$%appname%
 set divider======================================
 set tempdivider=================================================
@@ -87,7 +89,7 @@ echo # %appname% %appvers% - %appstat%
 echo # by %dev%
 echo # %divider%
 echo # Checking for wireless interface...
-netsh wlan show profiles | findstr "All"
+netsh wlan show profiles | findstr "%langall%"
 if %errorlevel%==1 goto fail3
 cls
 title %appname% %appvers% - %appstat% [Automated Mode]
@@ -97,7 +99,7 @@ echo # %appname% %appvers% - %appstat%
 echo # by %dev%
 echo # %divider%
 echo # Checking for wireless interface...
-netsh wlan show profiles | findstr "All" > temp.txt
+netsh wlan show profiles | findstr "%langall%" > temp.txt
 echo # Available SSID in this Machine
 type temp.txt
 echo # %divider%
@@ -107,7 +109,7 @@ echo setlocal enabledelayedexpansion >> helper.bat
 echo for /f "tokens=5*" %%%%i in (temp.txt) do ( set val=%%%%i %%%%j >> helper.bat
 echo if "!val:~-1!" == " " set val=!val:~0,-1! >> helper.bat
 echo echo !val! ^>^> final.txt) >> helper.bat
-echo for /f "tokens=*" %%%%i in (final.txt) do @echo SSID: %%%%i ^>^> creds.txt ^& echo # %tempdivider% ^>^> creds.txt ^& netsh wlan show profiles name=%%%%i key=clear ^| findstr /c:"Key Content" ^>^> creds.txt ^& echo # %tempdivider% ^>^> creds.txt ^& echo # Key content is the password of your target SSID. ^>^> creds.txt ^& echo # %tempdivider% ^>^> creds.txt >> helper.bat
+echo for /f "tokens=*" %%%%i in (final.txt) do @echo SSID: %%%%i ^>^> creds.txt ^& echo # %tempdivider% ^>^> creds.txt ^& netsh wlan show profiles name=%%%%i key=clear ^| findstr /c:"%langkeycontent%" ^>^> creds.txt ^& echo # %tempdivider% ^>^> creds.txt ^& echo # Key content is the password of your target SSID. ^>^> creds.txt ^& echo # %tempdivider% ^>^> creds.txt >> helper.bat
 echo del /q temp.txt final.txt >> helper.bat
 echo exit >> helper.bat
 echo # Done...
@@ -159,7 +161,7 @@ rem =============================
 rem Manual Mode: Confirm Scan
 rem =============================
 :manualConfirm
-netsh wlan show profiles | findstr "All"
+netsh wlan show profiles | findstr "%langall%"
 if %errorlevel%==1 goto fail3
 goto mainualContinue
 
@@ -194,7 +196,7 @@ echo # by %dev%
 echo # %tempdivider%
 echo # SSID: %ssidname%
 echo # %tempdivider%
-netsh wlan show profiles name=%ssidname% key=clear | findstr /c:"Key Content" > temp.txt
+netsh wlan show profiles name=%ssidname% key=clear | findstr /c:"%langkeycontent%" > temp.txt
 type temp.txt
 echo # %tempdivider%
 echo # Key content is the password of your target SSID.
@@ -220,7 +222,7 @@ cls
 title %appname% %appvers% - %appstat%
 echo # SSID: %ssidname% >> creds.txt
 echo # %tempdivider% >> creds.txt
-netsh wlan show profiles name=%ssidname% key=clear | findstr /c:"Key Content" >> creds.txt
+netsh wlan show profiles name=%ssidname% key=clear | findstr /c:"%langkeycontent%" >> creds.txt
 echo # %tempdivider% >> creds.txt
 echo # Key content is the password of your target SSID. >> creds.txt
 echo # %tempdivider% >> creds.txt

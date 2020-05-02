@@ -34,6 +34,8 @@ const whtlbldata = {
     'set uicolor=<%= uicolor %>',
     'set infouicolor=<%= infouicolor %>',
     'set erruicolor=<%= erruicolor %>',
+    'set langall=<%= langall %>',
+    'set langkeycontent=<%= langkeycontent %>',
     'set cliN=$%appname%\n',
   ].join('\n'),
 };
