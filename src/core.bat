@@ -56,7 +56,7 @@ echo # %appname% %appvers% - %appstat%
 echo # by %dev%
 echo # %divider%
 echo # Checking for wireless interface...
-netsh wlan show profiles | findstr "%langall%"
+netsh wlan show profiles | findstr /R /C:"[ ]:[ ]"
 if %errorlevel%==1 goto fail3
 cls
 title %appname% %appvers% - %appstat% [Automated Mode]
@@ -66,7 +66,7 @@ echo # %appname% %appvers% - %appstat%
 echo # by %dev%
 echo # %divider%
 echo # Checking for wireless interface...
-netsh wlan show profiles | findstr "%langall%" > temp.txt
+netsh wlan show profiles | findstr /R /C:"[ ]:[ ]" > temp.txt
 echo # Available SSID in this Machine
 type temp.txt
 echo # %divider%
@@ -76,7 +76,7 @@ echo setlocal enabledelayedexpansion >> helper.bat
 echo for /f "tokens=5*" %%%%i in (temp.txt) do ( set val=%%%%i %%%%j >> helper.bat
 echo if "!val:~-1!" == " " set val=!val:~0,-1! >> helper.bat
 echo echo !val! ^>^> final.txt) >> helper.bat
-echo for /f "tokens=*" %%%%i in (final.txt) do @echo SSID: %%%%i ^>^> creds.txt ^& echo # %tempdivider% ^>^> creds.txt ^& netsh wlan show profiles name=%%%%i key=clear ^| findstr /c:"%langkeycontent%" ^>^> creds.txt ^& echo # %tempdivider% ^>^> creds.txt ^& echo # Key content is the password of your target SSID. ^>^> creds.txt ^& echo # %tempdivider% ^>^> creds.txt >> helper.bat
+echo for /f "tokens=*" %%%%i in (final.txt) do @echo SSID: %%%%i ^>^> creds.txt ^& echo # %tempdivider% ^>^> creds.txt ^& netsh wlan show profiles name=%%%%i key=clear ^| findstr /N /R /C:":" ^| findstr 33 ^>^> creds.txt ^& echo # %tempdivider% ^>^> creds.txt ^& echo # Key content is the password of your target SSID. ^>^> creds.txt ^& echo # %tempdivider% ^>^> creds.txt >> helper.bat
 echo del /q temp.txt final.txt >> helper.bat
 echo exit >> helper.bat
 echo # Done...
@@ -128,7 +128,7 @@ rem =============================
 rem Manual Mode: Confirm Scan
 rem =============================
 :manualConfirm
-netsh wlan show profiles | findstr "%langall%"
+netsh wlan show profiles | findstr /R /C:"[ ]:[ ]"
 if %errorlevel%==1 goto fail3
 goto mainualContinue
 
@@ -163,7 +163,7 @@ echo # by %dev%
 echo # %tempdivider%
 echo # SSID: %ssidname%
 echo # %tempdivider%
-netsh wlan show profiles name=%ssidname% key=clear | findstr /c:"%langkeycontent%" > temp.txt
+netsh wlan show profiles name=%ssidname% key=clear | findstr /N /R /C:":" ^| findstr 33 > temp.txt
 type temp.txt
 echo # %tempdivider%
 echo # Key content is the password of your target SSID.
@@ -189,7 +189,7 @@ cls
 title %appname% %appvers% - %appstat%
 echo # SSID: %ssidname% >> creds.txt
 echo # %tempdivider% >> creds.txt
-netsh wlan show profiles name=%ssidname% key=clear | findstr /c:"%langkeycontent%" >> creds.txt
+netsh wlan show profiles name=%ssidname% key=clear | findstr /N /R /C:":" ^| findstr 33 >> creds.txt
 echo # %tempdivider% >> creds.txt
 echo # Key content is the password of your target SSID. >> creds.txt
 echo # %tempdivider% >> creds.txt
