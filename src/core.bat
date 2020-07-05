@@ -148,6 +148,7 @@ echo # %divider%
 netsh wlan show profiles
 echo # %divider%
 echo # Please enter the SSID of target WiFi
+echo # (e.g. WIFI-NAME or if contains spaces do "WIFI NAME")
 echo # Type "cancel" or hit enter to go back (default)
 echo #
 set /p "ssidname=# $WiFiPassview> " || set ssidname=cancel
@@ -163,7 +164,7 @@ echo # by %dev%
 echo # %tempdivider%
 echo # SSID: %ssidname%
 echo # %tempdivider%
-netsh wlan show profiles name=%ssidname% key=clear | findstr /N /R /C:":" ^| findstr 33 > temp.txt
+netsh wlan show profiles name=%ssidname% key=clear | findstr /N /R /C:":" | findstr 33 > temp.txt
 type temp.txt
 echo # %tempdivider%
 echo # Key content is the password of your target SSID.
@@ -189,7 +190,7 @@ cls
 title %appname% %appvers% - %appstat%
 echo # SSID: %ssidname% >> creds.txt
 echo # %tempdivider% >> creds.txt
-netsh wlan show profiles name=%ssidname% key=clear | findstr /N /R /C:":" ^| findstr 33 >> creds.txt
+netsh wlan show profiles name=%ssidname% key=clear | findstr /N /R /C:":" | findstr 33 >> creds.txt
 echo # %tempdivider% >> creds.txt
 echo # Key content is the password of your target SSID. >> creds.txt
 echo # %tempdivider% >> creds.txt
@@ -288,7 +289,7 @@ echo # %divider%
 color %uicolor%
 echo #
 echo # This project is originally developed by Waren Gonzaga
-echo # Version name Karin is a real name from Karin of Elris
+echo # Version name Bella is a real name from Bella of Elris
 echo # Elris is a popular KPOP Girl Group... (my bias lol)
 echo # 
 echo # %divider%
@@ -383,7 +384,8 @@ rem =============================
 rem Options: Elris
 rem =============================
 :elris
-start https://www.youtube.com/watch?v=iPAIlZM1VUU
+rem stan elris hahaha
+start https://www.youtube.com/watch?v=tpLro7n3PWo
 goto options
 
 rem =============================
