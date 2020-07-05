@@ -35,6 +35,7 @@ This simple tool offers you the following features...
 * No manual reading of **``Key Content``**, the tool will do that for you!
 * No need admin rights to run the program.
 * Standalone batch program.
+* Supports all language
 * Customizable.
 
 ## Usage
@@ -87,7 +88,7 @@ Visit [FAQ section](https://github.com/warengonzaga/wifi-passview/wiki/Frequentl
 
 ## Contributing
 
-Contributions are welcome, create a pull request to this repo and I will review your code.
+Contributions are welcome, create a pull request to **dev** branch of this repo and I will review your code.
 
 ## Issues
 
@@ -108,7 +109,7 @@ Wanna see other projects I made? Join today!
 
 ## Donate or Support
 
-If you love this project please consider to support the development by means of coffee. I spend and waste my time just to save your time! Be a sponsor or backer of this project. Just a cup of coffee!
+If you love this project please consider to support the development by means of coffee. I spend my time just to save your time! Be a sponsor or backer of this project. Just a cup of coffee!
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg?style=for-the-badge)](https://paypal.me/warengonzagaofficial) [![Support](https://img.shields.io/badge/Support-Buy%20Me%20A%20Coffee-orange.svg?style=for-the-badge)](https://www.buymeacoffee.com/warengonzaga)
 
