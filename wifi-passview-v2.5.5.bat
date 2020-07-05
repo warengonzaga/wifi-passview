@@ -87,7 +87,7 @@ echo # %appname% %appvers% - %appstat%
 echo # by %dev%
 echo # %divider%
 echo # Checking for wireless interface...
-netsh wlan show profiles | findstr "All"
+netsh wlan show profiles
 if %errorlevel%==1 goto fail3
 cls
 title %appname% %appvers% - %appstat% [Automated Mode]
@@ -97,7 +97,7 @@ echo # %appname% %appvers% - %appstat%
 echo # by %dev%
 echo # %divider%
 echo # Checking for wireless interface...
-netsh wlan show profiles | findstr "All" > temp.txt
+netsh wlan show profiles  > temp.txt
 echo # Available SSID in this Machine
 type temp.txt
 echo # %divider%
@@ -159,7 +159,7 @@ rem =============================
 rem Manual Mode: Confirm Scan
 rem =============================
 :manualConfirm
-netsh wlan show profiles | findstr "All"
+netsh wlan show profiles
 if %errorlevel%==1 goto fail3
 goto mainualContinue
 
