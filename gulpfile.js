@@ -34,8 +34,6 @@ const whtlbldata = {
     'set uicolor=<%= uicolor %>',
     'set infouicolor=<%= infouicolor %>',
     'set erruicolor=<%= erruicolor %>',
-    'set langall=<%= langall %>',
-    'set langkeycontent=<%= langkeycontent %>',
     'set cliN=$%appname%\n',
   ].join('\n'),
 };
@@ -49,7 +47,7 @@ const copydata = {
     'REM Licensed Under The MIT License: http://opensource.org/licenses/MIT',
     'REM Copyright (c) <%= new Date().getFullYear() %> <%= author %>',
     'REM ',
-    'REM Facebook: @warengonzagaofficialpage',
+    'REM Facebook: @warengonzagaofficial',
     'REM Twitter: @warengonzaga',
     'REM Github: @warengonzaga',
     'REM Website: warengonzaga.com',
