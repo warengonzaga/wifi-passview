@@ -96,8 +96,6 @@ If you're facing a problem in using WiFi Passview please let me know by creating
 
 ## To Do
 
-* Email Options
-* Wireless Network Reporting
 * Extract WiFi Password Across Network (experimental)
 * More... (have suggestions? let me know!)
 
