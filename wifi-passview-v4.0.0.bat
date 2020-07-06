@@ -345,17 +345,19 @@ echo #
 echo # Delete "creds.txt" ............ [1]
 echo # Locate "creds.txt" ............ [2]
 echo # Open "creds.txt" in Notepad ... [3]
-echo # Premium Version ................[4]
-echo # Elris? Here I Am .............. [5]
-echo # Back to Main Menu ............. [6]
+echo # Generate WLAN Report .......... [4]
+echo # Premium Version ............... [5]
+echo # Elris? Here I Am .............. [6]
+echo # Back to Main Menu ............. [7]
 echo #
 set /p "options= # $WiFiPassview> " || set options=5
 if %options%==1 goto deleteCreds
 if %options%==2 goto locateCreds
 if %options%==3 goto notepadCreds
-if %options%==4 goto premium 
-if %options%==5 goto elris
-if %options%==6 goto mainMenu
+if %options%==4 goto wlanreport
+if %options%==5 goto premium 
+if %options%==6 goto elris
+if %options%==7 goto mainMenu
 goto fail4
 pause>null
 
@@ -402,6 +404,91 @@ cls
 type creds.txt
 if %errorlevel%==1 goto fail2
 start notepad creds.txt
+goto options
+
+rem =============================
+rem Options: Generate WLAN Report
+rem =============================
+:wlanreport
+del null
+cls
+title %appname% %appvers% - %appstat% [Generate WLAN Report]
+color %infouicolor%
+echo # %divider%
+echo # %appname% %appvers% - %appstat%
+echo # by %dev%
+echo # %divider%
+echo # [Generate WLAN Report]
+echo #
+echo # This tool will execute a command to generate WLAN Report for this machine.
+echo #
+echo # Note: This feature requires an administrative permissions to proceed.
+echo # Close this program and run it as administrator to be able to work!
+echo # %divider%
+echo #
+echo # Press any key to continue... (except power button lol)
+pause>null
+goto wlanreportAdmin
+
+rem =============================
+rem Generate WLAN Report: Check Admin
+rem =============================
+:wlanreportAdmin
+del null
+cls
+@echo off
+title %appname% %appvers% - %appstat% [Generate WLAN Report]
+color %uicolor%
+echo # %divider%
+echo # %appname% %appvers% - %appstat%
+echo # by %dev%
+echo # %divider%
+echo # Administrative permissions required. Detecting permissions...
+ping localhost -n 2 >NUL
+net session >nul 2>&1
+if %errorLevel% == 0 (
+echo # Administrator privileges found!
+echo # Starting WLAN Reporting...
+ping localhost -n 2 >NUL
+goto wlanreportCreate
+) else (
+cls
+color %erruicolor%
+title %appname% %appvers% - %appstat% [Generate WLAN Report]
+color %erruicolor%
+echo # %divider%
+echo # %appname% %appvers% - %appstat%
+echo # by %dev%
+echo # %divider%
+echo # ERROR ERROR ERROR [FAIL]
+echo #
+echo # WLAN reporting will not work!
+echo # Close this program and run it as administrator and try again.
+echo # %divider%
+echo #
+echo # Press any key to continue...
+pause>null
+goto options
+)
+
+rem =============================
+rem Generate WLAN Report: Create
+rem =============================
+:wlanreportCreate
+del null
+cls
+title %appname% %appvers% - %appstat% [Generate WLAN Report]
+color %uicolor%
+echo # %divider%
+echo # %appname% %appvers% - %appstat%
+echo # by %dev%
+echo # %divider%
+netsh wlan show wlanreport
+echo # %divider%
+echo #
+echo # Press any key to continue...
+pause>null
+start C:\ProgramData\Microsoft\Windows\WlanReport\wlan-report-latest.html
 goto options
 
 rem =============================
