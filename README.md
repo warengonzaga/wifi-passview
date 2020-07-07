@@ -52,7 +52,7 @@ _Wanna use for WiFi Hacking? Visit this [exclusive post from the author](https:/
 
 Here's the screeshot of the program...
 
-![Screenshot](./.github/img/screenshot.jpg)
+![Screenshot](./.github/img/wifi-passview-v4.gif)
 
 ## In Action
 
