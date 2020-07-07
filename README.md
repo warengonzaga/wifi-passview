@@ -35,8 +35,10 @@ This simple tool offers you the following features...
 * No manual reading of **``Key Content``**, the tool will do that for you!
 * No need admin rights to run the program.
 * Standalone batch program.
-* Supports all language
-* Customizable.
+* Supports all languages.
+* Generate WLAN report. (requires admin privileges)
+* Upload collected passwords to the cloud. (powered by file.io api)
+* Customizable builds.
 
 ## Usage
 
@@ -56,7 +58,9 @@ Here's the screeshot of the program...
 
 Here's how this tool works...
 
-[![YouTube](https://img.shields.io/badge/YouTube-Watch%20Here-red.svg?style=for-the-badge)](https://www.youtube.com/watch?v=dYWuXBjMyVc)
+[![YouTube](https://img.shields.io/badge/YouTube-Watch%20Here%20v2.5.5%20[Karin]-red.svg?style=for-the-badge)](https://www.youtube.com/watch?v=dYWuXBjMyVc)
+
+[![YouTube](https://img.shields.io/badge/YouTube-Watch%20Here%20v4%20[Bella]-blue.svg?style=for-the-badge)](https://youtube.com/warengonzaga)
 
 Don't forget to like, share, and subscribe to my channel!
 
