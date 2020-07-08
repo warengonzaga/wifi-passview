@@ -60,7 +60,7 @@ Here's how this tool works...
 
 [![YouTube](https://img.shields.io/badge/YouTube-Watch%20Here%20v2.5.5%20[Karin]-red.svg?style=for-the-badge)](https://www.youtube.com/watch?v=dYWuXBjMyVc)
 
-[![YouTube](https://img.shields.io/badge/YouTube-Watch%20Here%20v4%20[Bella]-blue.svg?style=for-the-badge)](https://youtube.com/warengonzaga)
+[![YouTube](https://img.shields.io/badge/YouTube-Watch%20Here%20v4.0.0%20[Bella]-blue.svg?style=for-the-badge)](https://youtube.com/warengonzaga)
 
 Don't forget to like, share, and subscribe to my channel!
 
