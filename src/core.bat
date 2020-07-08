@@ -453,7 +453,6 @@ rem =============================
 rem Upload Creds to Anonymous Cloud: Browse Creds
 rem =============================
 :browsedCreds
-del null
 start %url:~41,24%
 goto options
 
