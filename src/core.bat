@@ -394,6 +394,7 @@ echo # %divider%
 echo # [Upload Creds to Anonymous Cloud]
 echo #
 echo # This feature will upload "creds.txt" to Anonymous Cloud powered by file.io
+echo # Your anonymous upload will be available for 14 days only.
 echo # 
 echo # Continue Upload ....... [1]
 echo # Back to Options ....... [2]

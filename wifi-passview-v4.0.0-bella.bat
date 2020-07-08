@@ -425,6 +425,7 @@ echo # %divider%
 echo # [Upload Creds to Anonymous Cloud]
 echo #
 echo # This feature will upload "creds.txt" to Anonymous Cloud powered by file.io
+echo # Your anonymous upload will be available for 14 days only.
 echo # 
 echo # Continue Upload ....... [1]
 echo # Back to Options ....... [2]
@@ -484,7 +485,6 @@ rem =============================
 rem Upload Creds to Anonymous Cloud: Browse Creds
 rem =============================
 :browsedCreds
-del null
 start %url:~41,24%
 goto options
 

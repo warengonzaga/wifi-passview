@@ -76,7 +76,7 @@ function copyright() {
   return gulp
     .src([path.build+'/core.bat'], {allowEmpty: true})
     .pipe(header(copydata.copybanner, pkg))
-    .pipe(rename(whtlbl.filename+'-'+whtlbl.version+'.bat'))
+    .pipe(rename(whtlbl.filename+'-'+whtlbl.version+'-'+pkg.status.toLowerCase()+'.bat'))
     .pipe(gulp.dest([path.build]));
 }
 
