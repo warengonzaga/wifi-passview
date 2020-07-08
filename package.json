@@ -1,8 +1,8 @@
 {
   "name": "wifi-passview",
-  "version": "2.5.5",
+  "version": "4.0.0",
   "description": "An open source batch script based program that can recover your WiFi Password easily in seconds.",
-  "status": "Karin",
+  "status": "Bella",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,7 +16,9 @@
     "passview",
     "social engineering",
     "hacking",
-    "security"
+    "security",
+    "wireless",
+    "tool"
   ],
   "author": "Waren Gonzaga",
   "license": "MIT",

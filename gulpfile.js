@@ -47,7 +47,7 @@ const copydata = {
     'REM Licensed Under The MIT License: http://opensource.org/licenses/MIT',
     'REM Copyright (c) <%= new Date().getFullYear() %> <%= author %>',
     'REM ',
-    'REM Facebook: @warengonzagaofficialpage',
+    'REM Facebook: @warengonzagaofficial',
     'REM Twitter: @warengonzaga',
     'REM Github: @warengonzaga',
     'REM Website: warengonzaga.com',
@@ -76,7 +76,7 @@ function copyright() {
   return gulp
     .src([path.build+'/core.bat'], {allowEmpty: true})
     .pipe(header(copydata.copybanner, pkg))
-    .pipe(rename(whtlbl.filename+'-'+whtlbl.version+'.bat'))
+    .pipe(rename(whtlbl.filename+'-'+whtlbl.version+'-'+pkg.status.toLowerCase()+'.bat'))
     .pipe(gulp.dest([path.build]));
 }
 

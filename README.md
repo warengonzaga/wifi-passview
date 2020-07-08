@@ -35,7 +35,10 @@ This simple tool offers you the following features...
 * No manual reading of **``Key Content``**, the tool will do that for you!
 * No need admin rights to run the program.
 * Standalone batch program.
-* Customizable.
+* Supports all languages.
+* Generate WLAN report. (requires admin privileges)
+* Upload collected passwords to the cloud. (powered by file.io api)
+* Customizable builds.
 
 ## Usage
 
@@ -49,13 +52,15 @@ _Wanna use for WiFi Hacking? Visit this [exclusive post from the author](https:/
 
 Here's the screeshot of the program...
 
-![Screenshot](./.github/img/screenshot.jpg)
+![Screenshot](./.github/img/wifi-passview-v4.gif)
 
 ## In Action
 
 Here's how this tool works...
 
-[![YouTube](https://img.shields.io/badge/YouTube-Watch%20Here-red.svg?style=for-the-badge)](https://www.youtube.com/watch?v=dYWuXBjMyVc)
+[![YouTube](https://img.shields.io/badge/YouTube-Watch%20Here%20v2.5.5%20[Karin]-red.svg?style=for-the-badge)](https://youtu.be/dYWuXBjMyVc)
+
+[![YouTube](https://img.shields.io/badge/YouTube-Watch%20Here%20v4.0.0%20[Bella]-blue.svg?style=for-the-badge)](https://youtu.be/eu1DUgwP2wM)
 
 Don't forget to like, share, and subscribe to my channel!
 
@@ -87,7 +92,7 @@ Visit [FAQ section](https://github.com/warengonzaga/wifi-passview/wiki/Frequentl
 
 ## Contributing
 
-Contributions are welcome, create a pull request to this repo and I will review your code.
+Contributions are welcome, create a pull request to **dev** branch of this repo and I will review your code.
 
 ## Issues
 
@@ -95,10 +100,6 @@ If you're facing a problem in using WiFi Passview please let me know by creating
 
 ## To Do
 
-* Gulp Options
-* Email Options
-* CI (Travis)
-* Wireless Network Reporting
 * Extract WiFi Password Across Network (experimental)
 * More... (have suggestions? let me know!)
 
@@ -110,7 +111,7 @@ Wanna see other projects I made? Join today!
 
 ## Donate or Support
 
-If you love this project please consider to support the development by means of coffee. I spend and waste my time just to save your time! Be a sponsor or backer of this project. Just a cup of coffee!
+If you love this project please consider to support the development by means of coffee. I spend my time just to save your time! Be a sponsor or backer of this project. Just a cup of coffee!
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg?style=for-the-badge)](https://paypal.me/warengonzagaofficial) [![Support](https://img.shields.io/badge/Support-Buy%20Me%20A%20Coffee-orange.svg?style=for-the-badge)](https://www.buymeacoffee.com/warengonzaga)
 
