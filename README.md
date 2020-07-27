@@ -10,7 +10,7 @@ _**Disclaimer**: WiFi Passview is **NOT** designed for malicious use! Please use
 
 ## Featured By
 
-The project has been featured in some popular cybersecurity websites and Facebook Pages such as **[KitPloit.com (v2)](https://www.kitploit.com/2020/03/wifi-passview-v20-open-source-batch.html)**/**[KitPloit.com (v4)](https://www.kitploit.com/2020/07/wifi-passview-v40-open-source-batch.html)**, **[Hakin9.org](https://hakin9.org/wifi-passview-an-open-source-batch-script-based-wifi-passview-for-windows)**, **[Pentest Magazine](https://pentestmag.com/wifi-passview)**, **[Hackers Guru](https://www.facebook.com/hackersguru.in/posts/220017736039150)**, and **[National Cyber Security Services](https://www.facebook.com/ncybersec/posts/1526004767570242)**.
+The project has been featured in some popular cybersecurity websites and Facebook Pages such as **[KitPloit.com (v2)](https://www.kitploit.com/2020/03/wifi-passview-v20-open-source-batch.html)**/**[KitPloit.com (v4)](https://www.kitploit.com/2020/07/wifi-passview-v40-open-source-batch.html)**, **[Hakin9.org](https://hakin9.org/wifi-passview-an-open-source-batch-script-based-wifi-passview-for-windows)**, **[Pentest Magazine](https://pentestmag.com/wifi-passview)**, **[Malware Devil](https://www.malwaredevil.com/2020/07/13/wifi-passview-an-open-source-batch-script-based-wifi-passview-for-windows)**, and **[National Cyber Security Services](https://www.facebook.com/ncybersec/posts/1526004767570242)**.
 
 ## How it Works
 
