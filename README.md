@@ -136,4 +136,4 @@ This project is created by **Waren Gonzaga** for educational purposes.
 
 ---
 
-**</>** with **<3** by **Waren Gonzaga**
+:computer: with :heart: by **Waren Gonzaga** with **YHWH**
