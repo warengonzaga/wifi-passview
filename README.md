@@ -1,6 +1,6 @@
-# WiFi Passview [![Developed by Waren Gonzaga](https://img.shields.io/badge/Developed%20by-Waren%20Gonzaga-blue.svg?longCache=true&style=for-the-badge)](https://facebook.com/warengonzagaofficial)
+# WiFi Passview
 
-[![OS](https://img.shields.io/badge/OS-Windows-blue.svg?style=for-the-badge)](https://github.com/warengonzaga/wifi-passview) [![Github Release](https://img.shields.io/github/release/warengonzaga/wifi-passview.svg?style=for-the-badge)](https://github.com/warengonzaga/wifi-passview/releases) [![Github Star](https://img.shields.io/github/stars/warengonzaga/wifi-passview.svg?style=for-the-badge)](https://github.com/warengonzaga/wifi-passview) [![Github Fork](https://img.shields.io/github/forks/warengonzaga/wifi-passview.svg?style=for-the-badge)](https://github.com/warengonzaga/wifi-passview) [![License](https://img.shields.io/github/license/warengonzaga/wifi-passview.svg?style=for-the-badge)](https://github.com/warengonzaga/wifi-passview) [![Powered By](https://img.shields.io/badge/Powered%20By-GulpJS-orange.svg?style=for-the-badge)](https://gulpjs.com)
+[![by Waren Gonzaga](https://img.shields.io/badge/by-Waren%20Gonzaga-blue.svg?longCache=true&style=flat-square)](https://bmc.xyz/warengonzaga) [![Github Release](https://img.shields.io/github/release/warengonzaga/wifi-passview.svg?style=flat-square)](https://github.com/warengonzaga/wifi-passview/releases) [![Github Star](https://img.shields.io/github/stars/warengonzaga/wifi-passview.svg?style=flat-square)](https://github.com/warengonzaga/wifi-passview/stargazers) [![Github Fork](https://img.shields.io/github/forks/warengonzaga/wifi-passview.svg?style=flat-square)](https://github.com/WarenGonzaga/wifi-passview/network/members) [![License](https://img.shields.io/github/license/warengonzaga/wifi-passview.svg?style=flat-square)](https://github.com/warengonzaga/wifi-passview/blob/main/LICENSE)
 
 ![Official Icon](./.github/img/wifi-passview-github-banner.jpg)
 
@@ -50,23 +50,13 @@ Read the official blog on **[How to Use WiFi Passview](https://warengonzaga.com/
 
 _Wanna use for WiFi Hacking? Visit this [exclusive post from the author](https://www.buymeacoffee.com/p/40225)._
 
-## Screenshots
+## Preview and In Action
 
-Here's the screeshot of the program...
+Here's the screeshot of the program, click it to see it in action. Don't forget to like, share, and subscribe to my channel!
 
-![Screenshot](./.github/img/wifi-passview-v4.gif)
+[![Screenshot](./.github/img/wifi-passview-v4.gif)](https://youtu.be/eu1DUgwP2wM)
 
-## In Action
-
-Here's how this tool works...
-
-[![YouTube](https://img.shields.io/badge/YouTube-Watch%20Here%20v2.5.5%20[Karin]-red.svg?style=for-the-badge)](https://youtu.be/dYWuXBjMyVc)
-
-[![YouTube](https://img.shields.io/badge/YouTube-Watch%20Here%20v4.0.0%20[Bella]-blue.svg?style=for-the-badge)](https://youtu.be/eu1DUgwP2wM)
-
-Don't forget to like, share, and subscribe to my channel!
-
-## White Label / Personalize / Custom / Development
+## Custom Developpment
 
 * Download the repository
 * Do **``"npm install"``** and **``"npm install gulp-cli -g && npm install gulp -D"``**
@@ -102,6 +92,7 @@ If you're facing a problem in using WiFi Passview please let me know by creating
 
 ## To Do
 
+* Support other language
 * Extract WiFi Password Across Network (experimental)
 * More... (have suggestions? let me know!)
 
@@ -109,19 +100,7 @@ If you're facing a problem in using WiFi Passview please let me know by creating
 
 Wanna see other projects I made? Join today!
 
-[![Community](https://discordapp.com/api/guilds/659684980137656340/widget.png?style=banner2)](https://bmc.xyz/l/wgofficialds)
-
-## Donate or Support
-
-If you love this project please consider to support the development by means of coffee. I spend my time just to save your time! Be a sponsor or backer of this project. Just a cup of coffee!
-
-[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg?style=for-the-badge)](https://paypal.me/warengonzagaofficial) [![Support](https://img.shields.io/badge/Support-Buy%20Me%20A%20Coffee-orange.svg?style=for-the-badge)](https://www.buymeacoffee.com/warengonzaga)
-
-## Supporters and Backers
-
-* ernest_bigelow, nanantakeshi, kerry_howell
-
-Wanna see your name here? [Just buy me a coffee](https://www.buymeacoffee.com/warengonzaga)!
+[![Community](https://discordapp.com/api/guilds/659684980137656340/widget.png?style=banner3)](https://bmc.xyz/warengonzaga)
 
 ## License
 
@@ -131,8 +110,8 @@ WiFi Passview is licensed under GNU General Public License v3 - <https://opensou
 
 This project is created by **[Waren Gonzaga](https://github.com/warengonzaga)** for educational purposes.
 
-[![Facebook](https://img.shields.io/badge/facebook-%231877F2.svg?&style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/warengonzagaofficial) [![Twitter](https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/warengonzaga) [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/warengonzagaofficial) [![YouTube](https://img.shields.io/badge/youtube-%23FF0000.svg?&style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/warengonzaga)
+[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?&style=flat-square&logo=facebook&logoColor=white)](https://facebook.com/warengonzagaofficial) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?&style=flat-square&logo=twitter&logoColor=white)](https://twitter.com/warengonzaga) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/warengonzagaofficial) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?&style=flat-square&logo=youtube&logoColor=white)](https://youtube.com/warengonzaga) [![DEV](https://img.shields.io/badge/DEV-%23000000.svg?&style=flat-square&logo=dev.to&logoColor=white)](https://dev.to/warengonzaga) [![BMC](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-%23FFDD00.svg?&style=flat-square&logo=buy-me-a-coffee&logoColor=black)](https://dev.to/warengonzaga)
 
 ---
 
-:computer: Made with :heart: by Waren Gonzaga with **YHWH** :pray:
+:computer: Made with :heart: and :coffee: by Waren Gonzaga with **YHWH** :pray:
