@@ -1,6 +1,6 @@
 {
   "name": "wifi-passview",
-  "version": "4.0.0",
+  "version": "4.0.7",
   "description": "An open source batch script based program that can recover your WiFi Password easily in seconds.",
   "status": "Bella",
   "main": "gulpfile.js",
