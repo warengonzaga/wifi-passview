@@ -72,7 +72,7 @@ Looking for the official **``"wifi-passview-vX.X.X.exe"``** version and wanna su
 
 ![Premium](./.github/img/premium.jpg)
 
-[![Support](https://img.shields.io/badge/Download-Premium%20Version-green.svg?style=for-the-badge)](https://bmc.xyz/l/wifipassview)
+[![Support](https://img.shields.io/badge/Download-Premium%20Version-green.svg?style=for-the-badge)](https://wrngnz.ga/bmc)
 
 ## FAQs
 
@@ -100,7 +100,7 @@ If you're facing a problem in using WiFi Passview please let me know by creating
 
 Wanna see other projects I made? Join today!
 
-[![Community](https://discordapp.com/api/guilds/659684980137656340/widget.png?style=banner3)](https://bmc.xyz/warengonzaga)
+[![Community](https://discordapp.com/api/guilds/659684980137656340/widget.png?style=banner3)](https://wrngnz.ga/discord)
 
 ## License
 
