@@ -12,8 +12,8 @@ const header  = require("gulp-header");
 
 // gulp paths
 const path = {
-  build: "./prod",
-  source: "./src"
+  build: "./dist",
+  source: "./source"
 };
 
 // white label & copyright label
@@ -97,7 +97,7 @@ function copytoroot() {
 // clean production folder
 function cleanprod() {
   return gulp
-    .src('./prod')
+    .src(path.build)
     .pipe(clean());
 }
 
