@@ -30,7 +30,7 @@ body main .main_content {
   display: grid;
   position: absolute;
   left: 0;
-  top: 25%;
+  top: 27%;
   width: 100%;
   padding: 0 20px;
   place-items: center;
@@ -55,8 +55,8 @@ body main .content {
 
 body main .content h2 {
   position: relative;
-  top: 12px;
-  font-size: 1.7rem;
+  top: 27px;
+  font-size: 20px;
   font-weight: 400px;
   margin: 7px 0;
 }
@@ -71,7 +71,7 @@ body main .content h2 > a:hover {
 }
 
 .btn {
-  top: -10px;
+  top: 10px;
   position: relative;
   background: #7CF15F;
   color: #23272E;
@@ -80,6 +80,7 @@ body main .content h2 > a:hover {
   text-transform: uppercase;
   border-radius: 12px;
   letter-spacing: 0.08em;
+  font-size: 24px;
   font-weight: 800;
 }
 
