@@ -1,0 +1,7 @@
+body {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
