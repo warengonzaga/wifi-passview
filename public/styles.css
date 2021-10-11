@@ -30,11 +30,10 @@ body main .main_content {
   display: grid;
   position: absolute;
   left: 0;
-  top: 15%;
+  top: 25%;
   width: 100%;
   padding: 0 20px;
   place-items: center;
-  height: 100vh;
   text-align: center;
 }
 
@@ -51,6 +50,7 @@ body main .content {
   text-align: center;
   font-size: 1.88rem;
   position: relative;
+  top: -20px;
 }
 
 body main .content h2 {
