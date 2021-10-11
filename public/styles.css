@@ -55,18 +55,18 @@ body main .content {
 
 body main .content h2 {
   position: relative;
-  top: 10px;
+  top: 12px;
   font-size: 1.7rem;
-  font-weight: normal;
+  font-weight: 400px;
   margin: 7px 0;
 }
 body main .content h2 > a {
   text-decoration: none;
   margin: 0 4px;
-  color: #61A4F1;
+  color: #7CF15F;
 }
 body main .content h2 > a:hover {
-  color: #E25252;
+  color: #D5E0F4;
   transition: all 0.3s ease-out;
 }
 
@@ -78,14 +78,15 @@ body main .content h2 > a:hover {
   padding: 15px 15px;
   text-decoration: none;
   text-transform: uppercase;
-  border-radius: 10px;
+  border-radius: 12px;
+  letter-spacing: 0.08em;
   font-weight: 800;
 }
 
 .btn:hover {
   color: #59AE45;
   background: #D5E0F4;
-  transition-duration: 0.2s;
+  transition-duration: 0.3s;
 }
 
 @media screen and (max-width: 600px) {
