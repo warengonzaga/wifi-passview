@@ -37,7 +37,7 @@ body main .logo #wifi {
 
 body main .content {
   text-align: center;
-  font-size: 1.92rem;
+  font-size: 1.88rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -49,10 +49,11 @@ body main .content h2 {
 }
 body main .content h2 > a {
   text-decoration: none;
+  margin: 0 4px;
   color: #61A4F1;
 }
 body main .content h2 > a:hover {
-  color: #a42222;
+  color: #E25252;
   transition: all 0.3s ease-out;
 }
 
