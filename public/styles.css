@@ -64,10 +64,10 @@ body main .content h2 > a {
   text-decoration: none;
   margin: 0 4px;
   color: #7CF15F;
+  transition: all 0.3s ease-out;
 }
 body main .content h2 > a:hover {
   color: #D5E0F4;
-  transition: all 0.3s ease-out;
 }
 
 .btn {
@@ -82,12 +82,12 @@ body main .content h2 > a:hover {
   letter-spacing: 0.08em;
   font-size: 24px;
   font-weight: 800;
+  transition: all 0.3s ease-out;
 }
 
 .btn:hover {
   color: #59AE45;
   background: #D5E0F4;
-  transition-duration: 0.3s;
 }
 
 @media screen and (max-width: 600px) {
