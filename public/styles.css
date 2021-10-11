@@ -1,7 +1,63 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
+  background: #23272E;
+  color: #D5E0F4;
   text-align: center;
   font-family: "Montserrat", sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
   height: 100%;
   display: grid;
   place-items: center;
+}
+
+body main {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+body main .logo {
+  font-size: 9em;
+  cursor: default;
+  margin-top: 0;
+}
+body main .logo #wifi {
+  color: #7CF15F;
+}
+
+body main .content {
+  text-align: center;
+  font-size: 1.92rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+body main .content h2 {
+  font-weight: normal;
+  margin: 7px 0;
+}
+body main .content h2 > a {
+  text-decoration: none;
+  color: #61A4F1;
+}
+body main .content h2 > a:hover {
+  color: #a42222;
+  transition: all 0.3s ease-out;
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 42.5%;
+  }
 }
