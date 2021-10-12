@@ -2,7 +2,7 @@
 
 [![by Waren Gonzaga](https://img.shields.io/badge/by-Waren%20Gonzaga-blue.svg?longCache=true&style=flat-square)](https://bmc.xyz/warengonzaga) [![Release](https://img.shields.io/github/release/warengonzaga/wifi-passview.svg?style=flat-square)](https://github.com/warengonzaga/wifi-passview/releases) [![Downloads](https://img.shields.io/github/downloads/warengonzaga/wifi-passview/total?style=flat-square)](https://github.com/warengonzaga/wifi-passview/archive/main.zip) [![Star](https://img.shields.io/github/stars/warengonzaga/wifi-passview.svg?style=flat-square)](https://github.com/warengonzaga/wifi-passview/stargazers) [![License](https://img.shields.io/github/license/warengonzaga/wifi-passview.svg?style=flat-square)](https://github.com/warengonzaga/wifi-passview/blob/main/LICENSE)
 
-![Official Icon](./.github/wifi-passview-github-banner.jpg)
+![Official Icon](./public/assets/img/wifi-passview-github-banner.jpg)
 
 **WiFi Passview** is an open-source batch script-based program that can recover your WiFi Password easily in seconds. This is for Windows OS only. Basically, this scripted program has the same function as other passview software such as webpassview and mailpassview.
 
@@ -55,7 +55,7 @@ _Wanna use for WiFi Hacking? Visit this [exclusive post from the author](https:/
 
 Here's the screeshot of the program, click it to see it in action. Don't forget to like, share, and subscribe to my channel!
 
-[![Screenshot](./.github/wifi-passview-v4.gif)](https://youtu.be/eu1DUgwP2wM)
+[![Screenshot](./public/assets/img/wifi-passview-v4.gif)](https://youtu.be/eu1DUgwP2wM)
 
 ## Custom Developpment
 
