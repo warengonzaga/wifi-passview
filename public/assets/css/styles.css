@@ -41,6 +41,7 @@ main {
 	background-color: #000;
 	border-radius: 10px;
 	margin: 0px;
+	padding: 0px 10px;
 }
 
 nav {
@@ -61,7 +62,7 @@ nav {
 }
 
 .site__img {
-	width: 50%;
+	width: 600px;
 	height: auto;
 }
 
@@ -93,13 +94,20 @@ nav {
 	background: #D5E0F4;
 }
 
+@media screen and (max-width: 700px) {
+	.site__img {
+		max-width: 100%;
+		width: 100%;
+	}
+}
+
 @media screen and (max-width: 600px) {
-	html {
-		font-size: 42.5%;
+	.site__h1 {
+		margin-top: 80px;
 	}
 
-	.site__h1 {
-		margin-top: 95px;
+	.site__nav {
+		font-size: 18px;
 	}
 
 	.site__img {
