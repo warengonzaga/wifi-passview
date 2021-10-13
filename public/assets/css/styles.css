@@ -97,4 +97,13 @@ nav {
 	html {
 		font-size: 42.5%;
 	}
+
+	.site__h1 {
+		margin-top: 95px;
+	}
+
+	.site__img {
+		max-width: 100%;
+		width: 100%;
+	}
 }
