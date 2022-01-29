@@ -4,7 +4,7 @@ Any contributions are welcome, encouraged, and valued. See the following informa
 
 ## 📋 Code of Conduct
 
-This project and everyone participating in it is governed by the WiFi Passview [Code of Conduct](https://github.com/warengonzaga/wifi-passview/blob/master/code_of_conduct.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to <opensource@warengonzaga.com>.
+This project and everyone participating in it is governed by the WiFi Passview's [Code of Conduct](https://github.com/warengonzaga/wifi-passview/blob/master/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to <opensource@warengonzaga.com>.
 
 ## 💖 How to Contribute
 
@@ -24,8 +24,8 @@ Answering a question in [Discussions](https://github.com/warengonzaga/wifi-passv
 
 ### 🐞 Reporting Bugs
 
-For any security bugs or issues, please read the [security policy](./security.md).
+For any security bugs or issues, please read the [security policy](./SECURITY.md).
 
 ---
 
-💻 Made with 💖 and ☕ by **Waren Gonzaga** with **YHWH** 🙏 | Citizen of Heaven
+💻💖☕ by [Waren Gonzaga](https://warengonzaga.com) | [YHWH](https://youtu.be/9vh6Dz9oh8I?t=85) 🙏
