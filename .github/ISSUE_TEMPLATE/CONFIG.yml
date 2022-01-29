@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🙏 Q&A Forum
+    url: https://github.com/warengonzaga/wifi-passview/discussions/categories/q-a
+    about: Have a question? Let us know!
+  - name: 🧠 Suggestions
+    url: https://github.com/WarenGonzaga/wifi-passview/discussions/categories/brainstorm
+    about: Have a suggestion? Let us know!
+  - name: 📚 Documentation
+    url: https://docs.warengonzaga.com/wifi-passview
+    about: Official Documentation for WiFi Passview

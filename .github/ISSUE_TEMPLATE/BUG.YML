@@ -1,0 +1,14 @@
+name: 🐛 Bug Report
+description: 
+labels: ["bug"]
+assignees:
+  - WarenGonzaga
+body:
+  - type: textarea
+      id: description
+      attributes:
+        label: Description
+        description: Please describe the bug you are reporting.
+        placeholder: A weird bug appeared... 😱
+      validations:
+        required: true
