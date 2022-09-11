@@ -2,7 +2,7 @@
 
 [![created by](https://img.shields.io/badge/created%20by-Waren%20Gonzaga-blue.svg?longCache=true&style=flat-square)](https://github.com/warengonzaga) [![release](https://img.shields.io/github/release/warengonzaga/wifi-passview.svg?style=flat-square)](https://github.com/warengonzaga/wifi-passview/releases) [![star](https://img.shields.io/github/stars/warengonzaga/wifi-passview.svg?style=flat-square)](https://github.com/warengonzaga/wifi-passview/stargazers) [![license](https://img.shields.io/github/license/warengonzaga/wifi-passview.svg?style=flat-square)](https://github.com/warengonzaga/wifi-passview/blob/main/license)
 
-![Official Icon](./public/assets/img/wifi-passview-github-banner.jpg)
+![Official Icon](.github/image/repo-banner.jpg)
 
 **WiFi Passview** is an open-source batch script-based program that can recover your WiFi Password easily in seconds. This is for Windows OS only. Basically, this scripted program has the same function as other passview software such as webpassview and mailpassview.
 
@@ -60,10 +60,10 @@ Please report any issues and bugs by [creating a new issue here](https://github.
 
 ## 🍀 Sponsors and Supporters
 
-> Love what I do? **[Send me some coffees](https://warengonzaga.com/donate)**! ☕☕☕
+> Love what I do? Send me some [love](https://github.com/sponsors/warengonzaga) or [coffee](https://buymeacoff.ee/warengonzaga)!? 💖☕
 >
-> Can't send coffees? 😥 Nominate me for a **[GitHub Star](https://stars.github.com/nominate)** instead!
-> Your coffee donation and support will help me to continue working on open-source projects like this. 🙏😇
+> Can't send some love or coffees? 😥 Nominate me for a **[GitHub Star](https://stars.github.com/nominate)** instead!
+> Your support will help me to continue working on open-source projects like this. 🙏😇
 
 ## 📋 Code of Conduct
 
