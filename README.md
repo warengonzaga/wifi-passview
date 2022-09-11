@@ -16,7 +16,7 @@ The project has been featured in some popular cybersecurity websites and Faceboo
 
 Here's the screeshot of the program, click it to see it in action. Don't forget to like, share, and subscribe to my channel!
 
-[![screenshot](./public/assets/img/wifi-passview-v4.gif)](https://youtu.be/eu1DUgwP2wM)
+[![screenshot](.github/image/screenshot-v4.gif)](https://youtu.be/eu1DUgwP2wM)
 
 ## ⚡ Features
 
