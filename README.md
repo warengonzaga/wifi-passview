@@ -2,7 +2,7 @@
 
 [![created by](https://img.shields.io/badge/created%20by-Waren%20Gonzaga-blue.svg?longCache=true&style=flat-square)](https://github.com/warengonzaga) [![release](https://img.shields.io/github/release/warengonzaga/wifi-passview.svg?style=flat-square)](https://github.com/warengonzaga/wifi-passview/releases) [![star](https://img.shields.io/github/stars/warengonzaga/wifi-passview.svg?style=flat-square)](https://github.com/warengonzaga/wifi-passview/stargazers) [![license](https://img.shields.io/github/license/warengonzaga/wifi-passview.svg?style=flat-square)](https://github.com/warengonzaga/wifi-passview/blob/main/license)
 
-![Official Icon](./public/assets/img/wifi-passview-github-banner.jpg)
+![Official Icon](.github/image/repo-banner.jpg)
 
 **WiFi Passview** is an open-source batch script-based program that can recover your WiFi Password easily in seconds. This is for Windows OS only. Basically, this scripted program has the same function as other passview software such as webpassview and mailpassview.
 
@@ -16,7 +16,7 @@ The project has been featured in some popular cybersecurity websites and Faceboo
 
 Here's the screeshot of the program, click it to see it in action. Don't forget to like, share, and subscribe to my channel!
 
-[![screenshot](./public/assets/img/wifi-passview-v4.gif)](https://youtu.be/eu1DUgwP2wM)
+[![screenshot](.github/image/screenshot-v4.gif)](https://youtu.be/eu1DUgwP2wM)
 
 ## ⚡ Features
 
@@ -60,10 +60,17 @@ Please report any issues and bugs by [creating a new issue here](https://github.
 
 ## 🍀 Sponsors and Supporters
 
-> Love what I do? **[Send me some coffees](https://warengonzaga.com/donate)**! ☕☕☕
+[![BuyMeaCoffee](https://wrngnz.ga/badge-buymeacoffee)](https://buymeacoff.ee/warengonzaga) [![Vercel](https://wrngnz.ga/badge-vercel)](https://vercel.com) [![CircleCI](https://wrngnz.ga/badge-circleci)](https://vercel.com) [![GitBook](https://wrngnz.ga/badge-gitbook)](https://gitbook.io) [![Digital Ocean](https://wrngnz.ga/badge-digitalocean)](https://digitalocean.com) [![Deepware](https://wrngnz.ga/badge-deepware)](https://deepware.ai/) [![NOWPayments](https://wrngnz.ga/badge-nowpayments)](https://nowpayments.io) [![StackHawk](https://img.shields.io/badge/Stackhawk-%2300CBC6.svg?&style=for-the-badge&logoColor=white)](https://stackhawk.com)
+
+> Love what I do? **[Send me some coffees](https://buymeacoff.ee/warengonzaga)**!
 >
-> Can't send coffees? 😥 Nominate me for a **[GitHub Star](https://stars.github.com/nominate)** instead!
-> Your coffee donation and support will help me to continue working on open-source projects like this. 🙏😇
+> Your coffee donation and support will help me to continue working on open-source projects like this.
+
+## 🌏 Community
+
+Join to my growing tech community and get the latest updates!
+
+[![community](https://discordapp.com/api/guilds/659684980137656340/widget.png?style=banner2)](https://wrngnz.ga/discord) [![community](https://discordapp.com/api/guilds/694612151444439081/widget.png?style=banner2)](https://wareneutron.com/discord)
 
 ## 📋 Code of Conduct
 
@@ -79,4 +86,12 @@ WiFi Passview is created by **[Waren Gonzaga](https://github.com/warengonzaga)**
 
 ---
 
-💻💖☕ by [Waren Gonzaga](https://warengonzaga.com) | [YHWH](https://youtu.be/9vh6Dz9oh8I?t=85) 🙏
+💻 Made with 💖 and ☕ by **Waren Gonzaga** with **YHWH** 🙏 | Citizen of Heaven
+
+[personal website]: https://warengonzaga.com
+[business website]: https://wgcompanyhq.com
+[biolink]: https://bio.link/warengonzaga
+[facebook]: https://facebook.com/warengonzagaofficial
+[twitter]: https://twitter.com/warengonzaga
+[instagram]: https://instagram.com/warengonzagaofficial
+[youtube]: https://youtube.com/warengonzaga
