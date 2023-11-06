@@ -1,10 +1,10 @@
 REM =============================
 REM WiFi Passview - https://github.com/WarenGonzaga/wrn-passview
 REM An open source batch script based program that can recover your WiFi Password easily in seconds.
-REM Version: 4.1.0 [Bella]
+REM Version: 5.0.0 [Sohee]
 REM Github: https://github.com/WarenGonzaga/wrn-passview
 REM Licensed Under The MIT License: http://opensource.org/licenses/MIT
-REM Copyright (c) 2021 Waren Gonzaga
+REM Copyright (c) 2023 Waren Gonzaga
 REM 
 REM Facebook: @warengonzagaofficial
 REM Twitter: @warengonzaga
@@ -21,8 +21,8 @@ REM =============================
 REM Setup Variables
 REM =============================
 set appname=WiFi Passview
-set appvers=v4.1.0
-set appstat=Bella
+set appvers=v5.0.0
+set appstat=Sohee
 set dev=Waren Gonzaga
 set desc=An open source batch script based program that can recover your WiFi Password easily in seconds.
 set uicolor=a
@@ -282,12 +282,12 @@ echo # Please consider to buy me a coffee or
 echo # just donate to keep this project alive.
 echo #
 echo # Buy Me A Coffee ....... [1]
-echo # PayPal ................ [2]
+echo # GitHub Sponsors ....... [2]
 echo # Back to Main Menu ..... [3]
 echo #
 set /p "donate=# $WiFiPassview> " || set donate=3
 if %donate%==1 goto buymeacoffee
-if %donate%==2 goto paypal
+if %donate%==2 goto sponsors
 if %donate%==3 goto mainMenu
 goto fail4
 pause>null
@@ -300,10 +300,10 @@ start https://buymeacoff.ee/warengonzaga
 goto donate
 
 rem =============================
-rem Donate: PayPal
+rem Donate: GitHub Sponsors
 rem =============================
 :paypal
-start https://paypal.me/warengonzagaofficial
+start https://github.com/sponsors/warengonzaga
 goto donate
 
 rem =============================
@@ -347,9 +347,8 @@ echo # Locate "creds.txt" ......................... [2]
 echo # Open "creds.txt" in Notepad ................ [3]
 echo # Upload "creds.txt" to Anonymous Cloud ...... [4]
 echo # Generate WLAN Report ....................... [5]
-echo # Premium Version ............................ [6]
-echo # Elris? Here I Am ........................... [7]
-echo # Back to Main Menu .......................... [8]
+echo # Elris? Here I Am ........................... [6]
+echo # Back to Main Menu .......................... [7]
 echo #
 set /p "options= # $WiFiPassview> " || set options=5
 if %options%==1 goto deleteCreds
@@ -357,9 +356,8 @@ if %options%==2 goto locateCreds
 if %options%==3 goto notepadCreds
 if %options%==4 goto uploadCreds
 if %options%==5 goto wlanreport
-if %options%==6 goto premium 
-if %options%==7 goto elris
-if %options%==8 goto mainMenu
+if %options%==6 goto elris
+if %options%==7 goto mainMenu
 goto fail4
 pause>null
 
@@ -571,13 +569,6 @@ echo #
 echo # Press any key to continue...
 pause>null
 start C:\ProgramData\Microsoft\Windows\WlanReport\wlan-report-latest.html
-goto options
-
-rem =============================
-rem Options: Premium
-rem =============================
-:premium
-start https://bmc.xyz/l/wifipassview
 goto options
 
 rem =============================

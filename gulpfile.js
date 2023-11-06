@@ -13,7 +13,7 @@ const header  = require("gulp-header");
 // gulp paths
 const path = {
   build: "./dist",
-  source: "./source"
+  source: "./src"
 };
 
 // white label & copyright label
