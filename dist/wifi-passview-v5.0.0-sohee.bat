@@ -4,7 +4,7 @@ REM An open source batch script based program that can recover your WiFi Passwor
 REM Version: 5.0.0 [Sohee]
 REM Github: https://github.com/WarenGonzaga/wrn-passview
 REM Licensed Under The MIT License: http://opensource.org/licenses/MIT
-REM Copyright (c) 2023 Waren Gonzaga
+REM Copyright (c) 2024 Waren Gonzaga
 REM 
 REM Facebook: @warengonzagaofficial
 REM Twitter: @warengonzaga
