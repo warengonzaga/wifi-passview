@@ -1,0 +1,12 @@
+Profiles on interface Wi-Fi:
+
+Group policy profiles (read only)
+---------------------------------
+    <None>
+
+User profiles
+-------------
+    All User Profile     : OfficeWiFi
+    All User Profile     : Lab-Network
+    Current User Profile : CoffeeShop
+    Number of profiles   : 3

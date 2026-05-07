@@ -1,4 +1,12 @@
-node_modules
-prod
-src/*.txt
-*.txt
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.env/
+coverage.xml
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+node_modules/
