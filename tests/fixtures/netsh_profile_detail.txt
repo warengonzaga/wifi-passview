@@ -1,0 +1,9 @@
+Profile OfficeWiFi on interface Wi-Fi:
+=======================================================================
+
+Security settings
+-----------------
+    Authentication         : WPA2-Personal
+    Cipher                 : CCMP
+    Security key           : Present
+    Key Content            : super-secret-password

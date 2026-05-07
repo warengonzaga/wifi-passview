@@ -1,97 +1,68 @@
-# WiFi Passview [![huntr](https://cdn.huntr.dev/huntr_security_badge_mono.svg)](https://huntr.dev)
+# WiFi Passview
 
-[![created by](https://img.shields.io/badge/created%20by-Waren%20Gonzaga-blue.svg?longCache=true&style=flat-square)](https://github.com/warengonzaga) [![release](https://img.shields.io/github/release/warengonzaga/wifi-passview.svg?style=flat-square)](https://github.com/warengonzaga/wifi-passview/releases) [![star](https://img.shields.io/github/stars/warengonzaga/wifi-passview.svg?style=flat-square)](https://github.com/warengonzaga/wifi-passview/stargazers) [![license](https://img.shields.io/github/license/warengonzaga/wifi-passview.svg?style=flat-square)](https://github.com/warengonzaga/wifi-passview/blob/main/license)
+WiFi Passview is now a **Python-based CLI** for authorized red-team simulation and defensive security validation. It helps operators demonstrate local Wi-Fi credential exposure risk on Windows hosts that they are explicitly permitted to assess.
 
-![Official Icon](.github/image/repo-banner.jpg)
+## Authorized Use Only
 
-**WiFi Passview** is an open-source batch script-based program that can recover your WiFi Password easily in seconds. This is for Windows OS only. Basically, this scripted program has the same function as other passview software such as webpassview and mailpassview.
+This project is for educational, defensive, and authorized assessment use only.
 
-_**Disclaimer**: WiFi Passview is **NOT** designed for malicious use! Please use this program responsibly!_
+- Use only on systems you own or where you have explicit written permission.
+- Do not use for stealth, unauthorized access, or data exfiltration.
+- Reports are generated to local files by default.
 
-## 💖 Featured By
+## Migration Note
 
-The project has been featured in some popular cybersecurity websites and Facebook Pages such as **[KitPloit.com (v2)](https://www.kitploit.com/2020/03/wifi-passview-v20-open-source-batch.html)**/**[KitPloit.com (v4)](https://www.kitploit.com/2020/07/wifi-passview-v40-open-source-batch.html)**, **[Hakin9.org](https://hakin9.org/wifi-passview-an-open-source-batch-script-based-wifi-passview-for-windows)**, **[Pentest Magazine](https://pentestmag.com/wifi-passview)**, **[Malware Devil](https://www.malwaredevil.com/2020/07/13/wifi-passview-an-open-source-batch-script-based-wifi-passview-for-windows)**, and **[National Cyber Security Services](https://www.facebook.com/ncybersec/posts/1526004767570242)**.
+The legacy batch/Gulp/Node workflow has been replaced by this Python CLI implementation. Legacy build flow is no longer part of the active project architecture.
 
-## 😎 Demo
+## Requirements
 
-Here's the screeshot of the program, click it to see it in action. Don't forget to like, share, and subscribe to my channel!
+- Python 3.11+
+- Windows (for profile and key collection capabilities)
 
-[![screenshot](.github/image/screenshot-v4.gif)](https://youtu.be/eu1DUgwP2wM)
+## Installation
 
-## ⚡ Features
+```bash
+python -m pip install -e .[dev]
+```
 
-This simple tool offers you the following features...
+## CLI Usage
 
-- Extract all available WiFi passwords stored in the target machine and can be done in just a seconds.
-- Extract password from specific target SSID.
-- Save extracted passwords.
-- Additional options.
-- No manual reading of **``Key Content``**, the tool will do that for you!
-- No need admin rights to run the program.
-- Standalone batch program.
-- Supports all languages.
-- Generate WLAN report. (requires admin privileges)
-- Upload collected passwords to the cloud. (powered by file.io api)
-- Customizable builds.
+```bash
+wifi-passview capability
+wifi-passview --yes list-profiles --format json
+wifi-passview --yes --non-interactive collect --format json --output ./reports/wifi.json
+```
 
-## 🕹️ Usage
+### Commands and options
 
-Download the repository and look for **``"wifi-passview-vX.X.X.bat"``** file and run it as ordinary ``*.bat`` file (_no need to run it as administrator_). All you have to do is to follow the on-screen instructions.
+- `capability`: Check platform/tool capability.
+- `list-profiles`: Enumerate WLAN profiles.
+- `collect`: Collect credential exposure findings into a local report.
+- `--format`: Choose `text` or `json` output format (command-dependent).
+- `--output`: Set local report path for `collect`.
+- `--yes`: Acknowledge authorized-use warning.
+- `--non-interactive`: Avoid prompts and fail if `--yes` is missing.
 
-## 📖 Documentation
+## Exit Codes
 
-Check out the official and complete documentation here.
+- `0`: Success
+- `1`: Runtime/adapter error
+- `2`: Usage or authorization gate failure
+- `3`: Unsupported platform/capability
 
-[![docs](https://img.shields.io/badge/docs-docs.warengonzaga.com/wifi--passview-blue.svg?longCache=true&style=for-the-badge)](https://docs.warengonzaga.com/wifi-passview)
+## Testing
 
-## 🎯 Contributing
+```bash
+pytest
+```
 
-Contributions are welcome, create a pull request to this repo and I will review your code. Please consider to submit your pull request to the `dev` branch. Thank you!
+The parser tests use mocked `netsh` output fixtures to validate profile and credential parsing behavior.
 
-Read the project's [contributing guide](./CONTRIBUTING.md) for more info.
+## Supported Platforms and Capability Notes
 
-## 💬 Discussions
+- **Windows**: first-class support via `netsh wlan` commands.
+- **Non-Windows**: capability check returns unsupported with explicit messaging.
 
-For any questions, suggestions, ideas, or simply you want to share your experience in using this project, feel free to share and discuss it to the [community](https://github.com/warengonzaga/wifi-passview/discussions)!
+## License
 
-## 🐛 Issues
-
-Please report any issues and bugs by [creating a new issue here](https://github.com/warengonzaga/wifi-passview/issues/new), also make sure you're reporting an issue that doesn't exist. Any help to improve the project would be appreciated. Thanks! 🙏✨
-
-## 🍀 Sponsors and Supporters
-
-[![BuyMeaCoffee](https://wrngnz.ga/badge-buymeacoffee)](https://buymeacoff.ee/warengonzaga) [![Vercel](https://wrngnz.ga/badge-vercel)](https://vercel.com) [![CircleCI](https://wrngnz.ga/badge-circleci)](https://vercel.com) [![GitBook](https://wrngnz.ga/badge-gitbook)](https://gitbook.io) [![Digital Ocean](https://wrngnz.ga/badge-digitalocean)](https://digitalocean.com) [![Deepware](https://wrngnz.ga/badge-deepware)](https://deepware.ai/) [![NOWPayments](https://wrngnz.ga/badge-nowpayments)](https://nowpayments.io) [![StackHawk](https://img.shields.io/badge/Stackhawk-%2300CBC6.svg?&style=for-the-badge&logoColor=white)](https://stackhawk.com)
-
-> Love what I do? **[Send me some coffees](https://buymeacoff.ee/warengonzaga)**!
->
-> Your coffee donation and support will help me to continue working on open-source projects like this.
-
-## 🌏 Community
-
-Join to my growing tech community and get the latest updates!
-
-[![community](https://discordapp.com/api/guilds/659684980137656340/widget.png?style=banner2)](https://wrngnz.ga/discord) [![community](https://discordapp.com/api/guilds/694612151444439081/widget.png?style=banner2)](https://wareneutron.com/discord)
-
-## 📋 Code of Conduct
-
-Read the project's [code of conduct](./code_of_conduct.md).
-
-## 📃 License
-
-WiFi Passview is licensed under [GNU General Public License v3.0](https://opensource.org/licenses/GPL-3.0).
-
-## 📝 Author
-
-WiFi Passview is created by **[Waren Gonzaga](https://github.com/warengonzaga)**, with the help of awesome [contributors](https://github.com/warengonzaga/wifi-passview/graphs/contributors).
-
----
-
-💻 Made with 💖 and ☕ by **Waren Gonzaga** with **YHWH** 🙏 | Citizen of Heaven
-
-[personal website]: https://warengonzaga.com
-[business website]: https://wgcompanyhq.com
-[biolink]: https://bio.link/warengonzaga
-[facebook]: https://facebook.com/warengonzagaofficial
-[twitter]: https://twitter.com/warengonzaga
-[instagram]: https://instagram.com/warengonzagaofficial
-[youtube]: https://youtube.com/warengonzaga
+WiFi Passview is licensed under GNU General Public License v3.0.
