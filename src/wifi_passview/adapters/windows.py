@@ -16,6 +16,7 @@ class AdapterRuntimeError(RuntimeError):
 
 
 Runner = Callable[[list[str]], subprocess.CompletedProcess[str]]
+KEY_VALUE_PATTERN = re.compile(r"^\s+[^:]+:\s*(.+)\s*$")
 
 
 class WindowsWlanAdapter(OSAdapter):
@@ -109,20 +110,26 @@ class WindowsWlanAdapter(OSAdapter):
     @classmethod
     def _parse_profiles_output(cls, output: str) -> list[str]:
         profiles: "OrderedDict[str, None]" = OrderedDict()
-        key_value_line = re.compile(r"^\s+[^:]+:\s*(.+?)\s*$")
         for raw_line in output.splitlines():
-            match = key_value_line.match(raw_line)
+            match = KEY_VALUE_PATTERN.match(raw_line)
             if not match:
                 continue
-            profile = match.group(1).strip().strip('"')
-            if not profile:
-                continue
-            if profile.isdigit():
-                continue
-            if profile.startswith("<") and profile.endswith(">"):
+            profile = match.group(1).strip('"')
+            if not cls._is_profile_candidate(profile):
                 continue
             profiles[profile] = None
         return list(profiles.keys())
+
+    @staticmethod
+    def _is_profile_candidate(value: str) -> bool:
+        normalized = value.strip()
+        if not normalized:
+            return False
+        if normalized.isdigit():
+            return False
+        if normalized.startswith("<") and normalized.endswith(">"):
+            return False
+        return True
 
     @classmethod
     def _parse_profile_details_output(cls, output: str) -> dict[str, str]:
