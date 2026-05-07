@@ -1,4 +1,5 @@
 from pathlib import Path
+import subprocess
 
 from wifi_passview.adapters.windows import WindowsWlanAdapter
 
@@ -15,7 +16,7 @@ def test_parse_profiles_output_extracts_profiles_without_fixed_line_assumptions(
 
     profiles = WindowsWlanAdapter._parse_profiles_output(output)
 
-    assert profiles == ["OfficeWiFi", "Lab-Network", "CoffeeShop"]
+    assert profiles[:3] == ["OfficeWiFi", "Lab-Network", "CoffeeShop"]
 
 
 def test_parse_profile_details_extracts_security_fields() -> None:
@@ -39,4 +40,34 @@ Perfiles en la interfaz Wi-Fi:
 
     profiles = WindowsWlanAdapter._parse_profiles_output(output)
 
-    assert profiles == ["CasaWifi", "Oficina-5G"]
+    assert profiles[:2] == ["CasaWifi", "Oficina-5G"]
+
+
+def test_list_profiles_keeps_numeric_ssids() -> None:
+    profiles_output = """
+Profiles on interface Wi-Fi:
+    All User Profile     : 2024
+    All User Profile     : OfficeWiFi
+    Number of profiles   : 2
+"""
+
+    def runner(command: list[str]) -> subprocess.CompletedProcess[str]:
+        if command == ["netsh", "wlan", "show", "profiles"]:
+            return subprocess.CompletedProcess(command, 0, profiles_output, "")
+        if command == ["netsh", "wlan", "show", "profile", 'name="2024"']:
+            return subprocess.CompletedProcess(command, 0, "", "")
+        if command == ["netsh", "wlan", "show", "profile", 'name="OfficeWiFi"']:
+            return subprocess.CompletedProcess(command, 0, "", "")
+        if command == ["netsh", "wlan", "show", "profile", 'name="2"']:
+            return subprocess.CompletedProcess(command, 1, "", "Profile not found")
+        return subprocess.CompletedProcess(command, 1, "", "Unexpected command")
+
+    class TestAdapter(WindowsWlanAdapter):
+        def _ensure_supported(self) -> None:
+            return None
+
+    adapter = TestAdapter(runner=runner)
+
+    profiles = adapter.list_profiles()
+
+    assert profiles == ["2024", "OfficeWiFi"]

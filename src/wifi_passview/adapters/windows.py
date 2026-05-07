@@ -16,7 +16,7 @@ class AdapterRuntimeError(RuntimeError):
 
 
 Runner = Callable[[list[str]], subprocess.CompletedProcess[str]]
-KEY_VALUE_PATTERN = re.compile(r"^\s+[^:]+:\s*(.+)\s*$")
+_KEY_VALUE_PATTERN = re.compile(r"^\s+[^:]+:\s*(.+)\s*$")
 
 
 class WindowsWlanAdapter(OSAdapter):
@@ -57,7 +57,13 @@ class WindowsWlanAdapter(OSAdapter):
         result = self._runner(["netsh", "wlan", "show", "profiles"])
         if result.returncode != 0:
             raise AdapterRuntimeError((result.stderr or result.stdout).strip() or "Failed to list WLAN profiles")
-        return self._parse_profiles_output(result.stdout)
+        profiles = self._parse_profiles_output(result.stdout)
+        resolved_profiles: list[str] = []
+        for profile in profiles:
+            if profile.isdigit() and not self._profile_exists(profile):
+                continue
+            resolved_profiles.append(profile)
+        return resolved_profiles
 
     def collect_findings(self) -> list[CredentialFinding]:
         findings: list[CredentialFinding] = []
@@ -111,7 +117,7 @@ class WindowsWlanAdapter(OSAdapter):
     def _parse_profiles_output(cls, output: str) -> list[str]:
         profiles: "OrderedDict[str, None]" = OrderedDict()
         for raw_line in output.splitlines():
-            match = KEY_VALUE_PATTERN.match(raw_line)
+            match = _KEY_VALUE_PATTERN.match(raw_line)
             if not match:
                 continue
             profile = match.group(1).strip('"')
@@ -125,11 +131,13 @@ class WindowsWlanAdapter(OSAdapter):
         normalized = value.strip()
         if not normalized:
             return False
-        if normalized.isdigit():
-            return False
         if normalized.startswith("<") and normalized.endswith(">"):
             return False
         return True
+
+    def _profile_exists(self, profile: str) -> bool:
+        result = self._runner(["netsh", "wlan", "show", "profile", f'name="{profile}"'])
+        return result.returncode == 0
 
     @classmethod
     def _parse_profile_details_output(cls, output: str) -> dict[str, str]:

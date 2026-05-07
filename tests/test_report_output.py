@@ -22,3 +22,13 @@ def test_write_report_accepts_directory_path_with_trailing_separator(tmp_path: P
     assert report_path == report_dir / "wifi-passview-report.txt"
     assert report_dir.exists()
     assert report_path.read_text(encoding="utf-8") == "summary"
+
+
+def test_write_report_accepts_windows_style_trailing_separator(tmp_path: Path) -> None:
+    report_dir = tmp_path / "windows-out"
+    windows_style = str(report_dir).replace("/", "\\") + "\\"
+
+    report_path = write_report("{}", windows_style, "json")
+
+    assert report_path.read_text(encoding="utf-8") == "{}"
+    assert report_path.name == "wifi-passview-report.json"

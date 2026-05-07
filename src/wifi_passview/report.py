@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -39,8 +40,9 @@ def to_summary(report_data: dict[str, object]) -> str:
 def write_report(content: str, output_path: str | None, suffix: str) -> Path:
     default_name = f"wifi-passview-report.{suffix}"
     if output_path:
-        path = Path(output_path)
-        if path.is_dir() or (not path.exists() and output_path.endswith(("/", "\\"))):
+        normalized_output_path = output_path.replace("\\", os.sep)
+        path = Path(normalized_output_path)
+        if path.is_dir() or (not path.exists() and normalized_output_path.endswith((os.sep, "/", "\\"))):
             path = path / default_name
     else:
         path = Path.cwd() / default_name
