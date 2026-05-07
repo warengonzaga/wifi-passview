@@ -8,7 +8,7 @@ from wifi_passview.models import CapabilityResult, CredentialFinding
 
 
 def build_report(capability: CapabilityResult, findings: list[CredentialFinding]) -> dict[str, object]:
-    sorted_findings = sorted(findings, key=lambda item: item.profile.lower())
+    sorted_findings = sorted(findings, key=lambda item: item.profile.casefold())
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "capability": capability.to_dict(),

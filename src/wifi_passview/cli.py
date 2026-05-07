@@ -55,8 +55,8 @@ def _require_authorization(args: argparse.Namespace) -> bool:
         print("Authorization acknowledgement required. Use --yes for non-interactive runs.", file=sys.stderr)
         return False
 
-    answer = input("Type YES to continue: ").strip()
-    if answer != "YES":
+    answer = input("Type YES to continue (case-insensitive): ").strip()
+    if answer.casefold() != "yes":
         print("Authorization not accepted. Aborting.", file=sys.stderr)
         return False
     return True

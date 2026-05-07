@@ -103,6 +103,7 @@ class WindowsWlanAdapter(OSAdapter):
 
     @staticmethod
     def _normalize_key(value: str) -> str:
+        """Normalize `netsh` keys for resilient matching across spacing/casing differences."""
         return re.sub(r"[^a-z0-9]+", "", value.lower())
 
     @classmethod

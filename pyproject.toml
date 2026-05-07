@@ -8,7 +8,7 @@ version = "6.0.0"
 description = "Authorized Wi-Fi credential exposure simulation toolkit for defensive security validation."
 readme = "README.md"
 requires-python = ">=3.11"
-license = { text = "GPL-3.0" }
+license = "GPL-3.0-or-later"
 authors = [
   { name = "Waren Gonzaga" }
 ]
