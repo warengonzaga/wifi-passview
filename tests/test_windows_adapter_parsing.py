@@ -27,3 +27,16 @@ def test_parse_profile_details_extracts_security_fields() -> None:
     assert details["cipher"] == "CCMP"
     assert details["security_key"] == "Present"
     assert details["key_content"] == "super-secret-password"
+
+
+def test_parse_profiles_output_supports_localized_labels() -> None:
+    output = """
+Perfiles en la interfaz Wi-Fi:
+    Todos los perfiles de usuario : CasaWifi
+    Perfil de usuario actual      : Oficina-5G
+    Número de perfiles            : 2
+"""
+
+    profiles = WindowsWlanAdapter._parse_profiles_output(output)
+
+    assert profiles == ["CasaWifi", "Oficina-5G"]

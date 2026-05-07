@@ -61,6 +61,7 @@ The parser tests use mocked `netsh` output fixtures to validate profile and cred
 ## Supported Platforms and Capability Notes
 
 - **Windows**: first-class support via `netsh wlan` commands.
+- **Localized Windows output**: profile discovery is locale-tolerant, but detailed field extraction (`authentication`, `cipher`, `security key`, `key content`) is optimized for English-labeled `netsh` output and may return null values on some localized systems.
 - **Non-Windows**: capability check returns unsupported with explicit messaging.
 
 ## License

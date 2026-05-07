@@ -109,20 +109,19 @@ class WindowsWlanAdapter(OSAdapter):
     @classmethod
     def _parse_profiles_output(cls, output: str) -> list[str]:
         profiles: "OrderedDict[str, None]" = OrderedDict()
+        key_value_line = re.compile(r"^\s+[^:]+:\s*(.+?)\s*$")
         for raw_line in output.splitlines():
-            if ":" not in raw_line:
+            match = key_value_line.match(raw_line)
+            if not match:
                 continue
-            key, value = [part.strip() for part in raw_line.split(":", 1)]
-            if not key or not value:
+            profile = match.group(1).strip().strip('"')
+            if not profile:
                 continue
-            normalized_key = cls._normalize_key(key)
-            if "profile" not in normalized_key:
+            if profile.isdigit():
                 continue
-            if "numberof" in normalized_key or "group" in normalized_key or "policy" in normalized_key:
+            if profile.startswith("<") and profile.endswith(">"):
                 continue
-            profile = value.strip().strip('"')
-            if profile:
-                profiles[profile] = None
+            profiles[profile] = None
         return list(profiles.keys())
 
     @classmethod
